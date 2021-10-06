@@ -258,6 +258,45 @@ Highlight your code snippets, take notes on math classes, and draw diagrams from
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R6P76B6VD1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-R6P76B6VD1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -760,7 +799,7 @@ data.head()
 <p>Demo:</p>
 
 
-<div id="chart-845329167" class="chart"></div>
+<div id="chart-572643198" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -770,7 +809,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json("./line-chart.json", function(chart) {
-        Plotly.plot('chart-845329167', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-572643198', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
