@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>College Football | Collin Dougherty</title>
-    <link>https://collindougherty.github.io/tag/college-football/</link>
-      <atom:link href="https://collindougherty.github.io/tag/college-football/index.xml" rel="self" type="application/rss+xml" />
-    <description>College Football</description>
+    <title>2021 | Collin Dougherty</title>
+    <link>https://collindougherty.github.io/tag/2021/</link>
+      <atom:link href="https://collindougherty.github.io/tag/2021/index.xml" rel="self" type="application/rss+xml" />
+    <description>2021</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://collindougherty.github.io/media/icon_huc338727306c0da16d008a2d3758f82ed_5456_512x512_fill_lanczos_center_3.png</url>
-      <title>College Football</title>
-      <link>https://collindougherty.github.io/tag/college-football/</link>
+      <title>2021</title>
+      <link>https://collindougherty.github.io/tag/2021/</link>
     </image>
     
     <item>
@@ -173,14 +173,6 @@ ggplot() +
 &lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/post/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
 No matter which way you slice it though, all that matters when the clock hits zero is the number of points on the board. In this regard, Georgia 2021 finds themselves among the best of the century. I hope we see more of the same in what looks like it could be the lowest scoring college football playoff yet.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>College Football Power Rankings</title>
-      <link>https://collindougherty.github.io/project/college-football/</link>
-      <pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/project/college-football/</guid>
-      <description></description>
     </item>
     
   </channel>
