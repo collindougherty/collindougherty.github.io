@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bitcoin | Collin Dougherty</title>
-    <link>https://collindougherty.github.io/tag/bitcoin/</link>
-      <atom:link href="https://collindougherty.github.io/tag/bitcoin/index.xml" rel="self" type="application/rss+xml" />
-    <description>Bitcoin</description>
+    <title>Backdoor posts | Collin Dougherty</title>
+    <link>https://collindougherty.github.io/backdoor-posts/</link>
+      <atom:link href="https://collindougherty.github.io/backdoor-posts/index.xml" rel="self" type="application/rss+xml" />
+    <description>Backdoor posts</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 25 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://collindougherty.github.io/media/icon_huc338727306c0da16d008a2d3758f82ed_5456_512x512_fill_lanczos_center_3.png</url>
-      <title>Bitcoin</title>
-      <link>https://collindougherty.github.io/tag/bitcoin/</link>
+      <title>Backdoor posts</title>
+      <link>https://collindougherty.github.io/backdoor-posts/</link>
     </image>
     
     <item>
