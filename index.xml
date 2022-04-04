@@ -5,12 +5,50 @@
     <link>https://collindougherty.github.io/</link>
       <atom:link href="https://collindougherty.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>the forecaster</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 16 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://collindougherty.github.io/media/icon_huab95def157338f74d8ed74c4d7fc7d51_16289_512x512_fill_lanczos_center_3.png</url>
       <title>the forecaster</title>
       <link>https://collindougherty.github.io/</link>
     </image>
+    
+    <item>
+      <title>How I Used Machine Learning to Solve March Madness</title>
+      <link>https://collindougherty.github.io/posthome/how-i-used-machine-learning-to-solve-march-madness/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://collindougherty.github.io/posthome/how-i-used-machine-learning-to-solve-march-madness/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Machine learning is the last invention that humanity will need to make&amp;rdquo;. So said Nick Bostrom, Oxford University theoretical physicist and philosopher. Yeah, about that. I&amp;rsquo;ve decided that machine learning doesn&amp;rsquo;t work as advertised in March Madness.&lt;/p&gt;
+&lt;p&gt;All jokes aside, I set out on a hopeful quest to build a predictive model, in the mold of Ken Pomeroy and Jeff Sagarin, to predict my March Madness Bracket for me. Gone were the hours of pouring over stats with paper and pen, or combing through NCAA data online to predict my winners. Now, I could spend an extra 20 hours making a computer do it for me.&lt;/p&gt;
+&lt;p&gt;In order to build my model, I employed the aid of R and hoopR. Without getting too much into the weeds of how I selected variables, the following were employed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;home/away&lt;/li&gt;
+&lt;li&gt;true shooting%&lt;/li&gt;
+&lt;li&gt;turnover%&lt;/li&gt;
+&lt;li&gt;free throw factor&lt;/li&gt;
+&lt;li&gt;offensive and defensive rebound%&lt;/li&gt;
+&lt;li&gt;field goal%&lt;/li&gt;
+&lt;li&gt;three point%&lt;/li&gt;
+&lt;li&gt;points per possession&lt;/li&gt;
+&lt;li&gt;points per possession allowed&lt;/li&gt;
+&lt;li&gt;scoring margin compared to expectation per game (did you beat that bad team by more than expected, or lose to Gonzaga by less than expected?)&lt;/li&gt;
+&lt;li&gt;block%&lt;/li&gt;
+&lt;li&gt;average possession difference&lt;/li&gt;
+&lt;li&gt;defensive stats for all these&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While some of these stats have overlap, my thought process was that if we knew efficiency per possession and total possessions, we could accurately predict the better team. We attempt to find differences in possessions through rebounds and turnovers, and efficiency metrics through shooting and free throw stats. I also included home/away as a variable and defensive versions of every stats, so that predictions account for the quality of defense on each side.&lt;/p&gt;
+&lt;p&gt;With the aid of my new holy grail of predictive variables, I employed a variety of statistical machine learning methods, including a random forest, logistic regression, support vector machine and XGboost. While the SVM and XGboost added small fractions of accuracy, the computing power required made pursuing them unrealistic for me, as I hope to be able to update my projections easily mid-season.&lt;/p&gt;
+&lt;p&gt;I landed on a simple logistic regression for the tournament, though I would prefer to use the random forest going forward, in order to better handle multi-colinearity. Both the random forest and the logistic regression performed very well on in-season data, accurately predicting the outcome of ~72% of games ahead of time. Per my calculations, this is in the same ballpark as KenPom and Sagarin&amp;rsquo;s ratings.&lt;/p&gt;
+&lt;p&gt;Of course, on a 72% accuracy and with so many evenly-matched in the tournament, chaos is bound to happen. My initial bracket:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;My machine learning model (~72% accuracy) fared well in conference tournaments. Time for the big dance. Percentages represent win probabilities. Gonzaga, Houston, Murray State and Auburn in the Final 4 &lt;a href=&#34;https://twitter.com/hashtag/MarchMadness?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MarchMadness&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnitedWeZag?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnitedWeZag&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GoCoogs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GoCoogs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/WarEagle?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#WarEagle&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GoRacers?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GoRacers&lt;/a&gt; &lt;a href=&#34;https://t.co/HTwNnhgi72&#34;&gt;pic.twitter.com/HTwNnhgi72&lt;/a&gt;&lt;/p&gt;&amp;mdash; the 🏈⚾️🏀 forecaster 🔮📈 (@CollinD0ugherty) &lt;a href=&#34;https://twitter.com/CollinD0ugherty/status/1503164797151596547?ref_src=twsrc%5Etfw&#34;&gt;March 14, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;And my bracket after the fact:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Post-mortem: My bracket is in shambles lol. Model went 23-16 in matchups it predicted ahead of time (~59%). A far cry from the 72% it put up in the regular season, but that&amp;#39;s probably to be expected in March. Article to come later today &lt;a href=&#34;https://t.co/4m5RWhw5PF&#34;&gt;https://t.co/4m5RWhw5PF&lt;/a&gt; &lt;a href=&#34;https://t.co/MImGLLsw87&#34;&gt;pic.twitter.com/MImGLLsw87&lt;/a&gt;&lt;/p&gt;&amp;mdash; the 🏈⚾️🏀 forecaster 🔮📈 (@CollinD0ugherty) &lt;a href=&#34;https://twitter.com/CollinD0ugherty/status/1511039615293014020?ref_src=twsrc%5Etfw&#34;&gt;April 4, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;A performance of 59% on the matchups where I had both team&amp;rsquo;s right isn&amp;rsquo;t terrible, but it&amp;rsquo;s a far cry from the 72% of the regular season. I&amp;rsquo;m hesitant to read too much into such a small sample size, but one observation I have made throughout the course of the post-season is a tendency for the model to overvalue teams from non-P6 conferences, such as Vermont and Murray State. Some improvements in how I go about adjusting for strength of schedule should help in this regard for next season.&lt;/p&gt;
+&lt;p&gt;Another consideration is adjusting for pace. We saw several teams struggle against St. Peter&amp;rsquo;s defense as they slowed the pace of the game drastically, allowing them to beat objectively better teams. Of course, no model will predict a team like St. Peter&amp;rsquo;s over Kentucky, but it seems reasonable that a team that uglies up the game should swing win probabilities a bit more in their favor relative to what we would expect. (Conversely, they may also make their win probability lower against teams we expect them to beat. Looking at you Wisconsin.)&lt;/p&gt;
+&lt;p&gt;The South region I predicted relatively well, but Houston&amp;rsquo;s 1 for 20 showing from behind the arc against Villanova likely changed the course of the tournament. Houston, who appeared to be the better team, just couldn&amp;rsquo;t buy a bucket, but that&amp;rsquo;s the beauty of the game. Overall, I&amp;rsquo;m happy with the ability to predict 72% of games, but there is definitely room for improvement. I look forward to improving the model in the coming months ahead of the 2022 season.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Pure Signal</title>
