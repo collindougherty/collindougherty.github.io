@@ -14,9 +14,9 @@
     
     <item>
       <title>How I Used Machine Learning to Solve March Madness</title>
-      <link>https://collindougherty.github.io/home/how-i-used-machine-learning-to-solve-march-madness/</link>
+      <link>https://collindougherty.github.io/featured/how-i-used-machine-learning-to-solve-march-madness/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/home/how-i-used-machine-learning-to-solve-march-madness/</guid>
+      <guid>https://collindougherty.github.io/featured/how-i-used-machine-learning-to-solve-march-madness/</guid>
       <description>&lt;p&gt;&amp;ldquo;Machine learning is the last invention that humanity will need to make&amp;rdquo;. So said Nick Bostrom, Oxford University theoretical physicist and philosopher. Yeah, about that. I&amp;rsquo;ve decided that machine learning doesn&amp;rsquo;t work as advertised in March Madness.&lt;/p&gt;
 &lt;p&gt;All jokes aside, I set out on a hopeful quest to build a predictive model, in the mold of Ken Pomeroy and Jeff Sagarin, to predict my March Madness Bracket for me. Gone were the hours of pouring over stats with paper and pen, or combing through NCAA data online to predict my winners. Now, I could spend an extra 20 hours making a computer do it for me.&lt;/p&gt;
 &lt;p&gt;In order to build my model, I employed the aid of R and hoopR. Without getting too much into the weeds of how I selected variables, the following were employed:&lt;/p&gt;
