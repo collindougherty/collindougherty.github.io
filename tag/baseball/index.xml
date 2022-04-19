@@ -14,11 +14,11 @@
     
     <item>
       <title>How Strike Zone Size Differs Based on Count</title>
-      <link>https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/</link>
+      <link>https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/</link>
       <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/</guid>
+      <guid>https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;There are a variety of studies which have examined the way situational factors affect ball/strike calls. One of the most important factors lies in the count at the time of the pitch. This makes intuitive sense to any student of the game, and is perhaps seen most clearly in the inordinate size of the strike zone on 3-0 counts, which are often called in the pitchers favor.&lt;/p&gt;
@@ -71,13 +71,13 @@ metrics(trainresults, truth = avgszsize, estimate = .pred)&lt;/code&gt;&lt;/pre&
   geom_point(data=szcountfg, aes(x=Strikes, y=avgszsize)) + 
   geom_smooth(data=szcountfg, aes(x=Strikes, y=avgszsize), method=&amp;quot;lm&amp;quot;, se=FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/index.en_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/index.en_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And here are the number of balls in the count compared to the zone size.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
   geom_point(data=szcountfg, aes(x=Balls, y=avgszsize)) + 
   geom_smooth(data=szcountfg, aes(x=Balls, y=avgszsize), method=&amp;quot;lm&amp;quot;, se=FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;How might we explain this relationship? A couple things come to mind immediately. A likely possibility is that umpires want to let the outcome be settled on the field, without interfering themselves. This leads to a hesitancy to call a 3rd strike unless it is obvious, and likewise a hesitancy to call ball 4 unless it is obvious.&lt;/p&gt;
 &lt;p&gt;Whether you view this as a good thing or a bad thing depends on which side of the decision you find yourself on, I suppose.&lt;/p&gt;
 &lt;p&gt;This relationship has also been observed in other sports using data, though perhaps none know this better than the fans who have watched officials refrain from calling pass interference on the final drive of the game, or basketball refs swallow the whistle on an obvious shooting foul in the final seconds.&lt;/p&gt;

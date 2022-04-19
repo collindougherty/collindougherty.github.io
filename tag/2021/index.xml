@@ -14,11 +14,11 @@
     
     <item>
       <title>We Thought Georgia Had the Best Defense of the 21st century. Until Yesterday.</title>
-      <link>https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/</link>
+      <link>https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/</link>
       <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/</guid>
+      <guid>https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;With conference championships in the books and the college football playoff set, we have little to entertain ourselves with except looking at the most impressive parts of the 2021 season. One of the most outstanding storylines to come from the season was Georgia’s defense.&lt;/p&gt;
@@ -124,7 +124,7 @@ logs %&amp;gt;%
   labs(x = &amp;quot;Yards per Game Allowed&amp;quot;, y = &amp;quot;Points per Game Allowed&amp;quot;, title = &amp;quot;Despite the Lackluster Performance Yesterday...&amp;quot;, subtitle = &amp;quot;Georgia stacks up among the best in the 21st Century on Defense&amp;quot;, caption = &amp;quot;By: Collin Dougherty | Data Source: sportsreference.com&amp;quot;) + 
   theme_minimal() +
   theme(plot.title = element_text(size = 20, face = &amp;quot;bold&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;
 Even though they find themselves slipping a bit in the rankings, and will likely continue to do so as they face the best teams in the country in the playoffs, we can see with a quick visualization just how elite this defense has been this year. Only a few other defenses of the past 21 years find themselves in the same region of this chart as Georgia.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;georgia &amp;lt;- logs %&amp;gt;%
   filter(School == &amp;quot;Georgia&amp;quot; &amp;amp; Year == 2021) 
@@ -140,7 +140,7 @@ logs %&amp;gt;%
   labs(x = &amp;quot;Yards per Play Allowed&amp;quot;, y = &amp;quot;Points per Game Allowed&amp;quot;, title = &amp;quot;Is Georgia Outperforming their Stats?&amp;quot;, subtitle = &amp;quot;Georgia gives up less points per game than their yardage predicts&amp;quot;, caption = &amp;quot;By: Collin Dougherty | Data Source: sportsreference.com&amp;quot;) + 
   theme_minimal() +
   theme(plot.title = element_text(size = 20, face = &amp;quot;bold&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
 Just for fun, I decided to run a linear regression on Yards per Play allowed and Points per Game allowed. What resulted is this graph. Teams below the blue line have allowed fewer points than we would have expected based on the number of yards per play they give up. We see that Georgia has been one of those teams which has slightly outperformed what we would have expected based on the stats. But at the end of the day, Kirby Smart only cares about the points on the scoreboard.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;defense21 &amp;lt;- logs %&amp;gt;% filter(Year == 2021 &amp;amp; Pts &amp;lt;17)
 yards &amp;lt;- defense21 %&amp;gt;% select(School, rYds, pYds)
@@ -156,7 +156,7 @@ ggplot() +
   coord_flip() + labs(x = &amp;quot;Team&amp;quot;, y = &amp;quot;Yards per Game Allowed&amp;quot;, title = &amp;quot;2021&amp;#39;s Best Defenses by Yardage per Game&amp;quot;, subtitle = &amp;quot;Georgia stacks up among the best in 2021 on Defense&amp;quot;, caption = &amp;quot;By: Collin Dougherty | Data Source: sportsreference.com&amp;quot;) + 
   theme_minimal() +
   theme(plot.title = element_text(size = 20, face = &amp;quot;bold&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;
 Let’s compare Georgia to their 2021 peers, which are more fresh in our collective memories. We have passing yards per game allowed in red and rushing yards per game allowed in blue. Overall, Georgia comes in just behind Wisconsin for best defenses on a yards per game scale, and just ahead of Oklahoma State. The fact that Oklahoma State held teams to such low yardage seems especially impressive when considering the pace of play in the Big 12 compared to the Big 10 and SEC.&lt;/p&gt;
 &lt;p&gt;Interestingly, the #4 and #5 defenses find themselves in the playoffs with Georgia.&lt;/p&gt;
 &lt;p&gt;Alternatively, using the composite stat we made earlier, Georgia ranks #1 this year, Cincinnati ranks #2, Michigan comes in at #7 and Alabama trails the pack at #15.&lt;/p&gt;
@@ -170,18 +170,18 @@ ggplot() +
   coord_flip() + labs(x = &amp;quot;Team&amp;quot;, y = &amp;quot;Points per Game Allowed&amp;quot;, title = &amp;quot;The Best Defenses by Points per Game&amp;quot;, subtitle = &amp;quot;Georgia stacks up among the best in the One Stat that Matters&amp;quot;, caption = &amp;quot;By: Collin Dougherty | Data Source: sportsreference.com&amp;quot;) + 
   theme_minimal() +
   theme(plot.title = element_text(size = 20, face = &amp;quot;bold&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
 No matter which way you slice it though, all that matters when the clock hits zero is the number of points on the board. In this regard, Georgia 2021 finds themselves among the best of the century. I hope we see more of the same in what looks like it could be the lowest scoring college football playoff yet.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Power Rankings 2021</title>
-      <link>https://collindougherty.github.io/postfootball/power-rankings-2021/</link>
+      <link>https://collindougherty.github.io/football/power-rankings-2021/</link>
       <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postfootball/power-rankings-2021/</guid>
+      <guid>https://collindougherty.github.io/football/power-rankings-2021/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postfootball/power-rankings-2021/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/football/power-rankings-2021/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Stay tuned for the latest power rankings… Coming soon.&lt;/p&gt;

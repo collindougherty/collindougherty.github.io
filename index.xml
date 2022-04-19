@@ -5,7 +5,7 @@
     <link>https://collindougherty.github.io/</link>
       <atom:link href="https://collindougherty.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>the forecaster</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://collindougherty.github.io/media/icon_huab95def157338f74d8ed74c4d7fc7d51_16289_512x512_fill_lanczos_center_3.png</url>
       <title>the forecaster</title>
@@ -13,10 +13,178 @@
     </image>
     
     <item>
+      <title>As the Market Burns</title>
+      <link>https://collindougherty.github.io/finance/as-the-market-burns/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://collindougherty.github.io/finance/as-the-market-burns/</guid>
+      <description>
+&lt;script src=&#34;https://collindougherty.github.io/finance/as-the-market-burns/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;I’m a young guy. I was born the year before the dot com bubble burst. I remember my parents talking about the Great Recession. Family friends were unemployed, and I was too young to understand why. My generation has no firsthand experience with life changing economic events.&lt;/p&gt;
+&lt;p&gt;That all changes this year.&lt;/p&gt;
+&lt;div id=&#34;the-housing-bubble&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Housing Bubble&lt;/h2&gt;
+&lt;p&gt;Michael Burry, investor and of “Big Short” fame, was an outspoken prophet of doom leading up to the housing market crash of 2008.&lt;/p&gt;
+&lt;p&gt;Something he said still rings true. When he noticed that the average home sales price was rocketing, but the median household income was unchanged, he recognized intuitively and accurately that the only thing accounting for the boom was leverage. Namely, individuals were indebted at rates far exceeding the norm.&lt;/p&gt;
+&lt;p&gt;Burry later asked the Federal Reserve and Congress: “if I could predict the Great Recession, why couldn’t you?”&lt;/p&gt;
+&lt;p&gt;They responded with an FBI investigation into all of his correspondences going back to 2003.
+At the end of their investigation, the Fed published a paper stating that the housing crash was entirely unpredictable. A “black-swan event”, they said.&lt;/p&gt;
+&lt;p&gt;It’s a good thing we have learned from those mistakes. Or have we?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;home-price-median-income.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;What you’re looking at is the same trend Burry identified in 2005, now reincarnated. And with a vengeance.&lt;/p&gt;
+&lt;p&gt;Renowned Yale economist Robert Shiller is best known for his work in developing the Case-Shiller home price index. What his work found is that home prices, when adjusted for inflation, are rather stable, given a long enough time frame. This goes against the conventional wisdom that buying a house is an asset which appreciates in value, but his research has been shown to be true in the world of economics.&lt;/p&gt;
+&lt;p&gt;While it is true that houses increase in nominal value, this is almost entirely due to inflation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;FIj7P0EXwAUQ2Bv.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;What the Case-Shiller home price index currently shows is that homes are once again severely overpriced, and ripe for a correction.&lt;/p&gt;
+&lt;div id=&#34;inflation-and-the-fed&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Inflation and the Fed&lt;/h3&gt;
+&lt;p&gt;Every American is aware of the impact that inflation has had on their personal finances. From soaring gas prices to wheat, inflation has reared its head everywhere.&lt;/p&gt;
+&lt;p&gt;Coming in at over 8%, we are at inflation levels which have not been seen in decades.&lt;/p&gt;
+&lt;p&gt;Contrary to popular belief, this has very little to do with Putin. Nor does it have as much to do with Biden as the political right would lead you to believe. To be sure, the “Build Back Better” plan would have been extremely negative for the inflation rate. But as it stands, the current situation has nothing to do with Trump, Biden or Putin.&lt;/p&gt;
+&lt;p&gt;No, it has everything to do with the Fed and monetary policy.&lt;/p&gt;
+&lt;p&gt;Most people know very little about the Fed. I believe that’s a mistake you cannot afford to make, as the Fed has essentially dictated the direction of markets since their inception.&lt;/p&gt;
+&lt;p&gt;[M2,_CPI,_PCE.webp]&lt;/p&gt;
+&lt;p&gt;Here we have a chart comparing the supply of M2 money with various metrics of inflation, such as the CPI and core CPI.&lt;/p&gt;
+&lt;p&gt;In laymen’s terms, M2 money represents all the money that is washing around in the economy. It’s a bit more nuanced than that, but it includes cash, checking accounts, and all “easily convertible near money”.&lt;/p&gt;
+&lt;p&gt;If you look closely at our chart, you will notice that M2 money supply spikes precede inflation rate increases with consistency.&lt;/p&gt;
+&lt;p&gt;Recent increases in M2 supply such as 2001 and 2009 reflected mass injections of cash into the economy through various monetary policies the Fed pursued in order to aid economic growth following substantial crashes and economic hardships.&lt;/p&gt;
+&lt;p&gt;Most recently, and most prominently, the Fed increased M2 supply to levels never before seen in the wake of COVID. By slashing interest rates to zero and pursuing aggressive quantitative easing programs, the Fed has had its desired affect of propping up markets and spurring economic growth.&lt;/p&gt;
+&lt;p&gt;But now the chickens have come home to roost. Inflation is off the charts.&lt;/p&gt;
+&lt;p&gt;While the Fed spent the year gaslighting us, calling inflation “transitory”, those who have been paying attention have seen this coming for a long time.&lt;/p&gt;
+&lt;p&gt;And while inflation will carry the news headlines, what few realize is that inflation is not the real worry.&lt;/p&gt;
+&lt;p&gt;As the strength of the US Dollar as the world reserve currency is the Fed’s primary mission and concern, they will use every tool they have to halt inflation. And they will succeed.&lt;/p&gt;
+&lt;p&gt;It’s how they do this that matters.&lt;/p&gt;
+&lt;p&gt;They’ll do this by raising interest rates, which will raise mortgage rates. This will take the demand out of the housing market. Prices will crash. Already mortgage rates have doubled from this time last year.&lt;/p&gt;
+&lt;p&gt;They’ll do this by dumping bonds and US treasuries on the open market. This will decrease the amount of cash in the economy drastically. Investors will become less speculative, as they have less spare cash to speculate with. Particularly big banks and investing firms. This will be a drag on the stock market.&lt;/p&gt;
+&lt;p&gt;But markets have survived Fed rate hikes and quantitative tightening before. The housing market is not nearly as precarious as 2008 either. While there is a housing bubble, it is not based on subprime mortgages.&lt;/p&gt;
+&lt;p&gt;But, there’s another problem. This one is far more concerning.&lt;/p&gt;
+&lt;div id=&#34;the-value-is-in-the-cash-flows&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The Value is in the Cash Flows&lt;/h4&gt;
+&lt;p&gt;What determines the value of a stock? I encourage you to ponder this question seriously, as in it lies a key to detecting market bubbles.&lt;/p&gt;
+&lt;p&gt;Is a stock’s value whatever people will pay for it?&lt;/p&gt;
+&lt;p&gt;Or is it the company’s total valuation divided by the number of shares?&lt;/p&gt;
+&lt;p&gt;While a stock’s price is both of these things, more fundamentally, a stock is worth the cash that the company is expected to bring in, both now and in the future.&lt;/p&gt;
+&lt;p&gt;A stock is overvalued when it’s priced at a higher level than the amount of cash they will eventually end up bringing in. Basically, investors get too optimistic.&lt;/p&gt;
+&lt;p&gt;(One way this would happen? A massive increase in the money supply, leading to consumers spending more. Consumers spending more boosts the corporate earnings. When the money supply drops as the Fed fights inflation, what happens next? Earnings drop; investor expectations are not met.)&lt;/p&gt;
+&lt;p&gt;One way that investors often use to gauge whether a stock is overvalued is the Price to Earnings ratio. Basically, it’s the market cap of the stock divided by the earnings of the company (or their profit).&lt;/p&gt;
+&lt;p&gt;More abstractly, it is the number of years that it will take to recoup the price you paid for the share at the time of purchase in corporate earnings.&lt;/p&gt;
+&lt;p&gt;[HistoricPEAverageWithBands.webp]&lt;/p&gt;
+&lt;p&gt;Taking a look at this chart, which I found &lt;a href=&#34;https://www.currentmarketvaluation.com/models/price-earnings.php&#34;&gt;here&lt;/a&gt;, we can see that P/E for the entire S&amp;amp;P 500 are rather elevated.&lt;/p&gt;
+&lt;p&gt;Another way to look at this is through the Shiller PE Ratio.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;download.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The astute observer will immediately notice extreme valuations often precipitate extreme market corrections. In fact, the Shiller PE almost always reverts from extremes eventually.&lt;/p&gt;
+&lt;p&gt;John Hussman, a retired Stanford economist and hedge fund manager, &lt;a href=&#34;https://www.hussmanfunds.com/comment/mc220210/&#34;&gt;argues convincingly&lt;/a&gt; that revenues are better predictors of future stock performance than earnings.&lt;/p&gt;
+&lt;p&gt;If one takes his analysis as true, we are in for a decade of slightly negative or flat returns.&lt;/p&gt;
+&lt;p&gt;In the process, I would not be at all surprised by a major market correction, followed by a multi-year period of recouping the losses.&lt;/p&gt;
+&lt;div id=&#34;investing-wisely-in-uncertain-times&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;Investing Wisely in Uncertain Times&lt;/h5&gt;
+&lt;p&gt;In sum, investors are looking at a war in Europe, a housing bubble, an aggressive Fed, off the charts inflation, ongoing COVID related supply chain issues and extremely overvalued markets.&lt;/p&gt;
+&lt;p&gt;Can markets push higher still? Absolutely. At the end of the day, the market can remain unpredictable longer than we can remain patient.&lt;/p&gt;
+&lt;p&gt;Markets will push higher as long as investors view overvalued stocks as better investments than cash.&lt;/p&gt;
+&lt;p&gt;Market corrections and crashes result when investors view cash as the best possible asset.&lt;/p&gt;
+&lt;p&gt;But, the savvy investor should consider if he is willing to risk a market crash in order to invest at record high valuations.&lt;/p&gt;
+&lt;p&gt;If the answer to that question is yes, he must be prepared for potentially spending years in the negative. Eventually, he is likely to come out on top.&lt;/p&gt;
+&lt;p&gt;If the answer to that question is no, that investor may very well find himself with the opportunity of a lifetime - to buy when all have sold.&lt;/p&gt;
+&lt;p&gt;I continue to advocate for patience. You’ll hear from me when that opportunity of a lifetime presents itself.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;The information in this article is not to be considered as financial advice, nor is the author a licensed financial advisor. The statements reflected herein are to be regarded as the opinions of the author alone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>As the Market Burns</title>
+      <link>https://collindougherty.github.io/home/as-the-market-burns/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://collindougherty.github.io/home/as-the-market-burns/</guid>
+      <description>
+&lt;script src=&#34;https://collindougherty.github.io/home/as-the-market-burns/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;I’m a young guy. I was born the year before the dot com bubble burst. I remember my parents talking about the Great Recession. Family friends were unemployed, and I was too young to understand why. My generation has no firsthand experience with life changing economic events.&lt;/p&gt;
+&lt;p&gt;That all changes this year.&lt;/p&gt;
+&lt;div id=&#34;the-housing-bubble&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Housing Bubble&lt;/h2&gt;
+&lt;p&gt;Michael Burry, investor and of “Big Short” fame, was an outspoken prophet of doom leading up to the housing market crash of 2008.&lt;/p&gt;
+&lt;p&gt;Something he said still rings true. When he noticed that the average home sales price was rocketing, but the median household income was unchanged, he recognized intuitively and accurately that the only thing accounting for the boom was leverage. Namely, individuals were indebted at rates far exceeding the norm.&lt;/p&gt;
+&lt;p&gt;Burry later asked the Federal Reserve and Congress: “if I could predict the Great Recession, why couldn’t you?”&lt;/p&gt;
+&lt;p&gt;They responded with an FBI investigation into all of his correspondences going back to 2003.
+At the end of their investigation, the Fed published a paper stating that the housing crash was entirely unpredictable. A “black-swan event”, they said.&lt;/p&gt;
+&lt;p&gt;It’s a good thing we have learned from those mistakes. Or have we?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;home-price-median-income.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;What you’re looking at is the same trend Burry identified in 2005, now reincarnated. And with a vengeance.&lt;/p&gt;
+&lt;p&gt;Renowned Yale economist Robert Shiller is best known for his work in developing the Case-Shiller home price index. What his work found is that home prices, when adjusted for inflation, are rather stable, given a long enough time frame. This goes against the conventional wisdom that buying a house is an asset which appreciates in value, but his research has been shown to be true in the world of economics.&lt;/p&gt;
+&lt;p&gt;While it is true that houses increase in nominal value, this is almost entirely due to inflation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;FIj7P0EXwAUQ2Bv.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;What the Case-Shiller home price index currently shows is that homes are once again severely overpriced, and ripe for a correction.&lt;/p&gt;
+&lt;div id=&#34;inflation-and-the-fed&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Inflation and the Fed&lt;/h3&gt;
+&lt;p&gt;Every American is aware of the impact that inflation has had on their personal finances. From soaring gas prices to wheat, inflation has reared its head everywhere.&lt;/p&gt;
+&lt;p&gt;Coming in at over 8%, we are at inflation levels which have not been seen in decades.&lt;/p&gt;
+&lt;p&gt;Contrary to popular belief, this has very little to do with Putin. Nor does it have as much to do with Biden as the political right would lead you to believe. To be sure, the “Build Back Better” plan would have been extremely negative for the inflation rate. But as it stands, the current situation has nothing to do with Trump, Biden or Putin.&lt;/p&gt;
+&lt;p&gt;No, it has everything to do with the Fed and monetary policy.&lt;/p&gt;
+&lt;p&gt;Most people know very little about the Fed. I believe that’s a mistake you cannot afford to make, as the Fed has essentially dictated the direction of markets since their inception.&lt;/p&gt;
+&lt;p&gt;[M2,_CPI,_PCE.webp]&lt;/p&gt;
+&lt;p&gt;Here we have a chart comparing the supply of M2 money with various metrics of inflation, such as the CPI and core CPI.&lt;/p&gt;
+&lt;p&gt;In laymen’s terms, M2 money represents all the money that is washing around in the economy. It’s a bit more nuanced than that, but it includes cash, checking accounts, and all “easily convertible near money”.&lt;/p&gt;
+&lt;p&gt;If you look closely at our chart, you will notice that M2 money supply spikes precede inflation rate increases with consistency.&lt;/p&gt;
+&lt;p&gt;Recent increases in M2 supply such as 2001 and 2009 reflected mass injections of cash into the economy through various monetary policies the Fed pursued in order to aid economic growth following substantial crashes and economic hardships.&lt;/p&gt;
+&lt;p&gt;Most recently, and most prominently, the Fed increased M2 supply to levels never before seen in the wake of COVID. By slashing interest rates to zero and pursuing aggressive quantitative easing programs, the Fed has had its desired affect of propping up markets and spurring economic growth.&lt;/p&gt;
+&lt;p&gt;But now the chickens have come home to roost. Inflation is off the charts.&lt;/p&gt;
+&lt;p&gt;While the Fed spent the year gaslighting us, calling inflation “transitory”, those who have been paying attention have seen this coming for a long time.&lt;/p&gt;
+&lt;p&gt;And while inflation will carry the news headlines, what few realize is that inflation is not the real worry.&lt;/p&gt;
+&lt;p&gt;As the strength of the US Dollar as the world reserve currency is the Fed’s primary mission and concern, they will use every tool they have to halt inflation. And they will succeed.&lt;/p&gt;
+&lt;p&gt;It’s how they do this that matters.&lt;/p&gt;
+&lt;p&gt;They’ll do this by raising interest rates, which will raise mortgage rates. This will take the demand out of the housing market. Prices will crash. Already mortgage rates have doubled from this time last year.&lt;/p&gt;
+&lt;p&gt;They’ll do this by dumping bonds and US treasuries on the open market. This will decrease the amount of cash in the economy drastically. Investors will become less speculative, as they have less spare cash to speculate with. Particularly big banks and investing firms. This will be a drag on the stock market.&lt;/p&gt;
+&lt;p&gt;But markets have survived Fed rate hikes and quantitative tightening before. The housing market is not nearly as precarious as 2008 either. While there is a housing bubble, it is not based on subprime mortgages.&lt;/p&gt;
+&lt;p&gt;But, there’s another problem. This one is far more concerning.&lt;/p&gt;
+&lt;div id=&#34;the-value-is-in-the-cash-flows&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The Value is in the Cash Flows&lt;/h4&gt;
+&lt;p&gt;What determines the value of a stock? I encourage you to ponder this question seriously, as in it lies a key to detecting market bubbles.&lt;/p&gt;
+&lt;p&gt;Is a stock’s value whatever people will pay for it?&lt;/p&gt;
+&lt;p&gt;Or is it the company’s total valuation divided by the number of shares?&lt;/p&gt;
+&lt;p&gt;While a stock’s price is both of these things, more fundamentally, a stock is worth the cash that the company is expected to bring in, both now and in the future.&lt;/p&gt;
+&lt;p&gt;A stock is overvalued when it’s priced at a higher level than the amount of cash they will eventually end up bringing in. Basically, investors get too optimistic.&lt;/p&gt;
+&lt;p&gt;(One way this would happen? A massive increase in the money supply, leading to consumers spending more. Consumers spending more boosts the corporate earnings. When the money supply drops as the Fed fights inflation, what happens next? Earnings drop; investor expectations are not met.)&lt;/p&gt;
+&lt;p&gt;One way that investors often use to gauge whether a stock is overvalued is the Price to Earnings ratio. Basically, it’s the market cap of the stock divided by the earnings of the company (or their profit).&lt;/p&gt;
+&lt;p&gt;More abstractly, it is the number of years that it will take to recoup the price you paid for the share at the time of purchase in corporate earnings.&lt;/p&gt;
+&lt;p&gt;[HistoricPEAverageWithBands.webp]&lt;/p&gt;
+&lt;p&gt;Taking a look at this chart, which I found &lt;a href=&#34;https://www.currentmarketvaluation.com/models/price-earnings.php&#34;&gt;here&lt;/a&gt;, we can see that P/E for the entire S&amp;amp;P 500 are rather elevated.&lt;/p&gt;
+&lt;p&gt;Another way to look at this is through the Shiller PE Ratio.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;download.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The astute observer will immediately notice extreme valuations often precipitate extreme market corrections. In fact, the Shiller PE almost always reverts from extremes eventually.&lt;/p&gt;
+&lt;p&gt;John Hussman, a retired Stanford economist and hedge fund manager, &lt;a href=&#34;https://www.hussmanfunds.com/comment/mc220210/&#34;&gt;argues convincingly&lt;/a&gt; that revenues are better predictors of future stock performance than earnings.&lt;/p&gt;
+&lt;p&gt;If one takes his analysis as true, we are in for a decade of slightly negative or flat returns.&lt;/p&gt;
+&lt;p&gt;In the process, I would not be at all surprised by a major market correction, followed by a multi-year period of recouping the losses.&lt;/p&gt;
+&lt;div id=&#34;investing-wisely-in-uncertain-times&#34; class=&#34;section level5&#34;&gt;
+&lt;h5&gt;Investing Wisely in Uncertain Times&lt;/h5&gt;
+&lt;p&gt;In sum, investors are looking at a war in Europe, a housing bubble, an aggressive Fed, off the charts inflation, ongoing COVID related supply chain issues and extremely overvalued markets.&lt;/p&gt;
+&lt;p&gt;Can markets push higher still? Absolutely. At the end of the day, the market can remain unpredictable longer than we can remain patient.&lt;/p&gt;
+&lt;p&gt;Markets will push higher as long as investors view overvalued stocks as better investments than cash.&lt;/p&gt;
+&lt;p&gt;Market corrections and crashes result when investors view cash as the best possible asset.&lt;/p&gt;
+&lt;p&gt;But, the savvy investor should consider if he is willing to risk a market crash in order to invest at record high valuations.&lt;/p&gt;
+&lt;p&gt;If the answer to that question is yes, he must be prepared for potentially spending years in the negative. Eventually, he is likely to come out on top.&lt;/p&gt;
+&lt;p&gt;If the answer to that question is no, that investor may very well find himself with the opportunity of a lifetime - to buy when all have sold.&lt;/p&gt;
+&lt;p&gt;I continue to advocate for patience. You’ll hear from me when that opportunity of a lifetime presents itself.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;The information in this article is not to be considered as financial advice, nor is the author a licensed financial advisor. The statements reflected herein are to be regarded as the opinions of the author alone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How I Used Machine Learning to Solve March Madness</title>
-      <link>https://collindougherty.github.io/posthome/how-i-used-machine-learning-to-solve-march-madness/</link>
+      <link>https://collindougherty.github.io/home/how-i-used-machine-learning-to-solve-march-madness/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/posthome/how-i-used-machine-learning-to-solve-march-madness/</guid>
+      <guid>https://collindougherty.github.io/home/how-i-used-machine-learning-to-solve-march-madness/</guid>
       <description>&lt;p&gt;&amp;ldquo;Machine learning is the last invention that humanity will need to make&amp;rdquo;. So said Nick Bostrom, Oxford University theoretical physicist and philosopher. Yeah, about that. I&amp;rsquo;ve decided that machine learning doesn&amp;rsquo;t work as advertised in March Madness.&lt;/p&gt;
 &lt;p&gt;All jokes aside, I set out on a hopeful quest to build a predictive model, in the mold of Ken Pomeroy and Jeff Sagarin, to predict my March Madness Bracket for me. Gone were the hours of pouring over stats with paper and pen, or combing through NCAA data online to predict my winners. Now, I could spend an extra 20 hours making a computer do it for me.&lt;/p&gt;
 &lt;p&gt;In order to build my model, I employed the aid of R and hoopR. Without getting too much into the weeds of how I selected variables, the following were employed:&lt;/p&gt;
@@ -52,35 +220,35 @@
     
     <item>
       <title>Pure Signal</title>
-      <link>https://collindougherty.github.io/money/</link>
+      <link>https://collindougherty.github.io/finance_home/</link>
       <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/money/</guid>
+      <guid>https://collindougherty.github.io/finance_home/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Baseball Breakdown</title>
-      <link>https://collindougherty.github.io/baseball/</link>
+      <link>https://collindougherty.github.io/baseball_home/</link>
       <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/baseball/</guid>
+      <guid>https://collindougherty.github.io/baseball_home/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Football Forecaster</title>
-      <link>https://collindougherty.github.io/football/</link>
+      <link>https://collindougherty.github.io/football_home/</link>
       <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/football/</guid>
+      <guid>https://collindougherty.github.io/football_home/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How Strike Zone Size Differs Based on Count</title>
-      <link>https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/</link>
+      <link>https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/</link>
       <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/</guid>
+      <guid>https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;There are a variety of studies which have examined the way situational factors affect ball/strike calls. One of the most important factors lies in the count at the time of the pitch. This makes intuitive sense to any student of the game, and is perhaps seen most clearly in the inordinate size of the strike zone on 3-0 counts, which are often called in the pitchers favor.&lt;/p&gt;
@@ -133,13 +301,13 @@ metrics(trainresults, truth = avgszsize, estimate = .pred)&lt;/code&gt;&lt;/pre&
   geom_point(data=szcountfg, aes(x=Strikes, y=avgszsize)) + 
   geom_smooth(data=szcountfg, aes(x=Strikes, y=avgszsize), method=&amp;quot;lm&amp;quot;, se=FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/index.en_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/index.en_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And here are the number of balls in the count compared to the zone size.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot() + 
   geom_point(data=szcountfg, aes(x=Balls, y=avgszsize)) + 
   geom_smooth(data=szcountfg, aes(x=Balls, y=avgszsize), method=&amp;quot;lm&amp;quot;, se=FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;How might we explain this relationship? A couple things come to mind immediately. A likely possibility is that umpires want to let the outcome be settled on the field, without interfering themselves. This leads to a hesitancy to call a 3rd strike unless it is obvious, and likewise a hesitancy to call ball 4 unless it is obvious.&lt;/p&gt;
 &lt;p&gt;Whether you view this as a good thing or a bad thing depends on which side of the decision you find yourself on, I suppose.&lt;/p&gt;
 &lt;p&gt;This relationship has also been observed in other sports using data, though perhaps none know this better than the fans who have watched officials refrain from calling pass interference on the final drive of the game, or basketball refs swallow the whistle on an obvious shooting foul in the final seconds.&lt;/p&gt;
@@ -150,11 +318,11 @@ metrics(trainresults, truth = avgszsize, estimate = .pred)&lt;/code&gt;&lt;/pre&
     
     <item>
       <title>About Pure Signal</title>
-      <link>https://collindougherty.github.io/postfinance/about-pure-signal/</link>
+      <link>https://collindougherty.github.io/finance/about-pure-signal/</link>
       <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postfinance/about-pure-signal/</guid>
+      <guid>https://collindougherty.github.io/finance/about-pure-signal/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postfinance/about-pure-signal/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/finance/about-pure-signal/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Welcome to Pure Signal. When I was in the midst of my college career, I became fascinated by the way stock markets and crypto markets moved. Like many of my other passions, trying to make sense of the seeming randomness enamored me. I share many of my insights here as I refine old methods and forge new ones. Assets don’t move randomly. Under the surface, if you look closely enough, you can distinguish the signal from the noise.&lt;/p&gt;
@@ -165,11 +333,11 @@ metrics(trainresults, truth = avgszsize, estimate = .pred)&lt;/code&gt;&lt;/pre&
     
     <item>
       <title>On U.S. markets and Global Peers</title>
-      <link>https://collindougherty.github.io/postfinance/on-u-s-markets-and-global-peers/</link>
+      <link>https://collindougherty.github.io/finance/on-u-s-markets-and-global-peers/</link>
       <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postfinance/on-u-s-markets-and-global-peers/</guid>
+      <guid>https://collindougherty.github.io/finance/on-u-s-markets-and-global-peers/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postfinance/on-u-s-markets-and-global-peers/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/finance/on-u-s-markets-and-global-peers/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;The US stock indexes have been on an incredible run compared to their global peers over the last decade. Yet the historic bull run which resulted in euphoria among retail investors is not going to last forever. Let’s take a look at history and global markets. If we’re lucky, we’ll be able to make some predictions about US markets in the coming years.&lt;/p&gt;
@@ -202,11 +370,11 @@ Even when the top performers reverted to the mean, most of them go on to yield p
     
     <item>
       <title>On U.S. markets and Global Peers</title>
-      <link>https://collindougherty.github.io/posthome/on-u-s-markets-and-global-peers/</link>
+      <link>https://collindougherty.github.io/home/on-u-s-markets-and-global-peers/</link>
       <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/posthome/on-u-s-markets-and-global-peers/</guid>
+      <guid>https://collindougherty.github.io/home/on-u-s-markets-and-global-peers/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/posthome/on-u-s-markets-and-global-peers/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/home/on-u-s-markets-and-global-peers/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;The US stock indexes have been on an incredible run compared to their global peers over the last decade. Yet the historic bull run which resulted in euphoria among retail investors is not going to last forever. Let’s take a look at history and global markets. If we’re lucky, we’ll be able to make some predictions about US markets in the coming years.&lt;/p&gt;
@@ -239,11 +407,11 @@ Even when the top performers reverted to the mean, most of them go on to yield p
     
     <item>
       <title>Scouting New Huskers QB Casey Thompson</title>
-      <link>https://collindougherty.github.io/postfootball/scouting-new-huskers-qb-casey-thompson/</link>
+      <link>https://collindougherty.github.io/football/scouting-new-huskers-qb-casey-thompson/</link>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postfootball/scouting-new-huskers-qb-casey-thompson/</guid>
+      <guid>https://collindougherty.github.io/football/scouting-new-huskers-qb-casey-thompson/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postfootball/scouting-new-huskers-qb-casey-thompson/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/football/scouting-new-huskers-qb-casey-thompson/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;After a long wait, the Huskers and Scott Frost have their quarterback for the 2022 season. Casey Thompson, who has two years of eligibility remaining, announced his commitment to Nebraska on Twitter last Friday.&lt;/p&gt;
@@ -280,11 +448,11 @@ Even when the top performers reverted to the mean, most of them go on to yield p
     
     <item>
       <title>Scouting New Huskers QB Casey Thompson</title>
-      <link>https://collindougherty.github.io/posthome/scouting-new-huskers-qb-casey-thompson/</link>
+      <link>https://collindougherty.github.io/home/scouting-new-huskers-qb-casey-thompson/</link>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/posthome/scouting-new-huskers-qb-casey-thompson/</guid>
+      <guid>https://collindougherty.github.io/home/scouting-new-huskers-qb-casey-thompson/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/posthome/scouting-new-huskers-qb-casey-thompson/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/home/scouting-new-huskers-qb-casey-thompson/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;After a long wait, the Huskers and Scott Frost have their quarterback for the 2022 season. Casey Thompson, who has two years of eligibility remaining, announced his commitment to Nebraska on Twitter last Friday.&lt;/p&gt;
@@ -321,11 +489,11 @@ Even when the top performers reverted to the mean, most of them go on to yield p
     
     <item>
       <title>We Thought Georgia Had the Best Defense of the 21st century. Until Yesterday.</title>
-      <link>https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/</link>
+      <link>https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/</link>
       <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/</guid>
+      <guid>https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;With conference championships in the books and the college football playoff set, we have little to entertain ourselves with except looking at the most impressive parts of the 2021 season. One of the most outstanding storylines to come from the season was Georgia’s defense.&lt;/p&gt;
@@ -431,7 +599,7 @@ logs %&amp;gt;%
   labs(x = &amp;quot;Yards per Game Allowed&amp;quot;, y = &amp;quot;Points per Game Allowed&amp;quot;, title = &amp;quot;Despite the Lackluster Performance Yesterday...&amp;quot;, subtitle = &amp;quot;Georgia stacks up among the best in the 21st Century on Defense&amp;quot;, caption = &amp;quot;By: Collin Dougherty | Data Source: sportsreference.com&amp;quot;) + 
   theme_minimal() +
   theme(plot.title = element_text(size = 20, face = &amp;quot;bold&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;
 Even though they find themselves slipping a bit in the rankings, and will likely continue to do so as they face the best teams in the country in the playoffs, we can see with a quick visualization just how elite this defense has been this year. Only a few other defenses of the past 21 years find themselves in the same region of this chart as Georgia.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;georgia &amp;lt;- logs %&amp;gt;%
   filter(School == &amp;quot;Georgia&amp;quot; &amp;amp; Year == 2021) 
@@ -447,7 +615,7 @@ logs %&amp;gt;%
   labs(x = &amp;quot;Yards per Play Allowed&amp;quot;, y = &amp;quot;Points per Game Allowed&amp;quot;, title = &amp;quot;Is Georgia Outperforming their Stats?&amp;quot;, subtitle = &amp;quot;Georgia gives up less points per game than their yardage predicts&amp;quot;, caption = &amp;quot;By: Collin Dougherty | Data Source: sportsreference.com&amp;quot;) + 
   theme_minimal() +
   theme(plot.title = element_text(size = 20, face = &amp;quot;bold&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
 Just for fun, I decided to run a linear regression on Yards per Play allowed and Points per Game allowed. What resulted is this graph. Teams below the blue line have allowed fewer points than we would have expected based on the number of yards per play they give up. We see that Georgia has been one of those teams which has slightly outperformed what we would have expected based on the stats. But at the end of the day, Kirby Smart only cares about the points on the scoreboard.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;defense21 &amp;lt;- logs %&amp;gt;% filter(Year == 2021 &amp;amp; Pts &amp;lt;17)
 yards &amp;lt;- defense21 %&amp;gt;% select(School, rYds, pYds)
@@ -463,7 +631,7 @@ ggplot() +
   coord_flip() + labs(x = &amp;quot;Team&amp;quot;, y = &amp;quot;Yards per Game Allowed&amp;quot;, title = &amp;quot;2021&amp;#39;s Best Defenses by Yardage per Game&amp;quot;, subtitle = &amp;quot;Georgia stacks up among the best in 2021 on Defense&amp;quot;, caption = &amp;quot;By: Collin Dougherty | Data Source: sportsreference.com&amp;quot;) + 
   theme_minimal() +
   theme(plot.title = element_text(size = 20, face = &amp;quot;bold&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;
 Let’s compare Georgia to their 2021 peers, which are more fresh in our collective memories. We have passing yards per game allowed in red and rushing yards per game allowed in blue. Overall, Georgia comes in just behind Wisconsin for best defenses on a yards per game scale, and just ahead of Oklahoma State. The fact that Oklahoma State held teams to such low yardage seems especially impressive when considering the pace of play in the Big 12 compared to the Big 10 and SEC.&lt;/p&gt;
 &lt;p&gt;Interestingly, the #4 and #5 defenses find themselves in the playoffs with Georgia.&lt;/p&gt;
 &lt;p&gt;Alternatively, using the composite stat we made earlier, Georgia ranks #1 this year, Cincinnati ranks #2, Michigan comes in at #7 and Alabama trails the pack at #15.&lt;/p&gt;
@@ -477,18 +645,18 @@ ggplot() +
   coord_flip() + labs(x = &amp;quot;Team&amp;quot;, y = &amp;quot;Points per Game Allowed&amp;quot;, title = &amp;quot;The Best Defenses by Points per Game&amp;quot;, subtitle = &amp;quot;Georgia stacks up among the best in the One Stat that Matters&amp;quot;, caption = &amp;quot;By: Collin Dougherty | Data Source: sportsreference.com&amp;quot;) + 
   theme_minimal() +
   theme(plot.title = element_text(size = 20, face = &amp;quot;bold&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/index.en_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;
 No matter which way you slice it though, all that matters when the clock hits zero is the number of points on the board. In this regard, Georgia 2021 finds themselves among the best of the century. I hope we see more of the same in what looks like it could be the lowest scoring college football playoff yet.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Power Rankings 2021</title>
-      <link>https://collindougherty.github.io/postfootball/power-rankings-2021/</link>
+      <link>https://collindougherty.github.io/football/power-rankings-2021/</link>
       <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postfootball/power-rankings-2021/</guid>
+      <guid>https://collindougherty.github.io/football/power-rankings-2021/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postfootball/power-rankings-2021/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/football/power-rankings-2021/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Stay tuned for the latest power rankings… Coming soon.&lt;/p&gt;
@@ -497,11 +665,11 @@ No matter which way you slice it though, all that matters when the clock hits ze
     
     <item>
       <title>Nebraska: Cursed or Consistent?</title>
-      <link>https://collindougherty.github.io/postfootball/nebraska-cursed-or-consistent/</link>
+      <link>https://collindougherty.github.io/football/nebraska-cursed-or-consistent/</link>
       <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postfootball/nebraska-cursed-or-consistent/</guid>
+      <guid>https://collindougherty.github.io/football/nebraska-cursed-or-consistent/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postfootball/nebraska-cursed-or-consistent/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/football/nebraska-cursed-or-consistent/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;The 2021 season has been quintessential Nebraska football under Scott Frost. Frost has raised his total losses in one score games to 17 since becoming the coach at Nebraska, with a record of 5-17 in such contests. Husker fans continue to debate whether or not his team is making progress. Any progress that has been made is hidden underneath an ugly 3-5 record, placing the Huskers last in the Big Ten West. But under the surface, a much more optimistic picture does indeed appear.&lt;/p&gt;
@@ -909,9 +1077,9 @@ The success rate is thus the number of successful plays divided by the sum of al
 &lt;p&gt;Perhaps unsurprisingly, the model indicates Nebraska has indeed underperformed. What may come as a surprise to many, however, is the margin by which that underperformance has come. Our model predicts a 6-2 record for the Cornhuskers. Given the strength of schedule faced to date (TeamRankings currently says it ranks 13th in difficulty, FPI currently ranks it 5th), the Huskers have played remarkably well. With a 6-2 record, a top 15 rating would likely follow. And yet the Huskers receive no votes for the top 25, sitting instead at a lowly 3-5, last in the Big Ten West.&lt;/p&gt;
 &lt;p&gt;The model predicts a nail-biting win against Michigan, a blowout win over Illinois, and a comfortable win against Michigan State on the road. It also feels confident the Huskers laid an egg against Minnesota, with a predicted loss on the road, and suggests maybe the Huskers were lucky to keep Oklahoma within one score based on how they played.&lt;/p&gt;
 &lt;p&gt;Let’s visualize the Huskers season further. Instead of looking at total yardage gained and allowed, we will look at yards per play and yards per play allowed. These stats help take into account pace of play and provide a more accurate picture of how a team is playing.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/nebraska-cursed-or-consistent/index.en_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/nebraska-cursed-or-consistent/index.en_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Nebraska, perhaps unsurprisingly at this point, finds itself among the better teams in college football when looking at YPP. But zooming in, we may be surprised at just how good their company is.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/nebraska-cursed-or-consistent/index.en_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/nebraska-cursed-or-consistent/index.en_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The Huskers nearest comparisons in YPP? #1. Georgia(7-0), #4. Ohio State(6-1), #2. Cincinnati(7-0), #3 Alabama(7-0), #8. Michigan State(7-0), #16 Baylor(6-1), #22. Iowa State(5-2), and only one unranked team, Florida(4-3), yes, the same Florida that took Alabama to the wire.&lt;/p&gt;
 &lt;p&gt;Looking even deeper, we see that not only has Nebraska badly underperformed, it is in fact one of only 3 teams to do so at such a dramatic clip this season, joining the ranks of Florida State and Western Kentucky.&lt;/p&gt;
 &lt;div id=&#34;mhhdrttamt&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
@@ -2051,11 +2219,11 @@ The success rate is thus the number of successful plays divided by the sum of al
     
     <item>
       <title>Nebraska: Cursed or Consistent?</title>
-      <link>https://collindougherty.github.io/posthome/nebraska-cursed-or-consistent/</link>
+      <link>https://collindougherty.github.io/home/nebraska-cursed-or-consistent/</link>
       <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/posthome/nebraska-cursed-or-consistent/</guid>
+      <guid>https://collindougherty.github.io/home/nebraska-cursed-or-consistent/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/posthome/nebraska-cursed-or-consistent/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/home/nebraska-cursed-or-consistent/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;The 2021 season has been quintessential Nebraska football under Scott Frost. Frost has raised his total losses in one score games to 17 since becoming the coach at Nebraska, with a record of 5-17 in such contests. Husker fans continue to debate whether or not his team is making progress. Any progress that has been made is hidden underneath an ugly 3-5 record, placing the Huskers last in the Big Ten West. But under the surface, a much more optimistic picture does indeed appear.&lt;/p&gt;
@@ -2463,9 +2631,9 @@ The success rate is thus the number of successful plays divided by the sum of al
 &lt;p&gt;Perhaps unsurprisingly, the model indicates Nebraska has indeed underperformed. What may come as a surprise to many, however, is the margin by which that underperformance has come. Our model predicts a 6-2 record for the Cornhuskers. Given the strength of schedule faced to date (TeamRankings currently says it ranks 13th in difficulty, FPI currently ranks it 5th), the Huskers have played remarkably well. With a 6-2 record, a top 15 rating would likely follow. And yet the Huskers receive no votes for the top 25, sitting instead at a lowly 3-5, last in the Big Ten West.&lt;/p&gt;
 &lt;p&gt;The model predicts a nail-biting win against Michigan, a blowout win over Illinois, and a comfortable win against Michigan State on the road. It also feels confident the Huskers laid an egg against Minnesota, with a predicted loss on the road, and suggests maybe the Huskers were lucky to keep Oklahoma within one score based on how they played.&lt;/p&gt;
 &lt;p&gt;Let’s visualize the Huskers season further. Instead of looking at total yardage gained and allowed, we will look at yards per play and yards per play allowed. These stats help take into account pace of play and provide a more accurate picture of how a team is playing.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/posthome/nebraska-cursed-or-consistent/index.en_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/home/nebraska-cursed-or-consistent/index.en_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Nebraska, perhaps unsurprisingly at this point, finds itself among the better teams in college football when looking at YPP. But zooming in, we may be surprised at just how good their company is.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/posthome/nebraska-cursed-or-consistent/index.en_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/home/nebraska-cursed-or-consistent/index.en_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The Huskers nearest comparisons in YPP? #1. Georgia(7-0), #4. Ohio State(6-1), #2. Cincinnati(7-0), #3 Alabama(7-0), #8. Michigan State(7-0), #16 Baylor(6-1), #22. Iowa State(5-2), and only one unranked team, Florida(4-3), yes, the same Florida that took Alabama to the wire.&lt;/p&gt;
 &lt;p&gt;Looking even deeper, we see that not only has Nebraska badly underperformed, it is in fact one of only 3 teams to do so at such a dramatic clip this season, joining the ranks of Florida State and Western Kentucky.&lt;/p&gt;
 &lt;div id=&#34;fxujatqzxs&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
@@ -3605,11 +3773,11 @@ The success rate is thus the number of successful plays divided by the sum of al
     
     <item>
       <title>The Big Blowouts of 2019</title>
-      <link>https://collindougherty.github.io/postfootball/the-big-blowouts-of-2019/</link>
+      <link>https://collindougherty.github.io/football/the-big-blowouts-of-2019/</link>
       <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/postfootball/the-big-blowouts-of-2019/</guid>
+      <guid>https://collindougherty.github.io/football/the-big-blowouts-of-2019/</guid>
       <description>
-&lt;script src=&#34;https://collindougherty.github.io/postfootball/the-big-blowouts-of-2019/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://collindougherty.github.io/football/the-big-blowouts-of-2019/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Every team experiences humiliating losses from time to time. Unless you’re named Alabama or Ohio State. But some losses are particularly bad. For a fun little experiment, let’s take a look at the worst losses of 2019 by scoring margin, and walk through how this was done in R.&lt;/p&gt;
@@ -3635,16 +3803,16 @@ worstgames &amp;lt;- newlogs %&amp;gt;% filter(Differential&amp;gt;64)&lt;/code&
     plot.subtitle = element_text(size=10), 
     panel.grid.minor = element_blank()
     )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/postfootball/the-big-blowouts-of-2019/index.en_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://collindougherty.github.io/football/the-big-blowouts-of-2019/index.en_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Yikes. It seems these teams had reason to hang their heads. Sad Saturday indeed.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>About The Forecaster</title>
-      <link>https://collindougherty.github.io/posthome/about-the-forecaster/</link>
+      <link>https://collindougherty.github.io/home/about-the-forecaster/</link>
       <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/posthome/about-the-forecaster/</guid>
+      <guid>https://collindougherty.github.io/home/about-the-forecaster/</guid>
       <description>&lt;p&gt;Welcome to The Forecaster, home of Collin Dougherty&amp;rsquo;s data driven insights (and occasional rambles). On the site you can find a host of different topics covered, including stock markets, cryptocurrencies, baseball, football, basketball and more.&lt;/p&gt;
 &lt;p&gt;I seek to use data and statistical machine learning to derive useful insights in all of these topics and more, whether it be a stock market trade idea or a prediction for a team&amp;rsquo;s performance in March Madness.&lt;/p&gt;
 &lt;p&gt;Lastly, I encourage you to check out my Twitter, where I post much more frequently and on an even wider variety of topics. My articles often make the most sense in that context. Check it out &lt;a href=&#34;https://twitter.com/CollinD0ugherty&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;

@@ -2,13 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://collindougherty.github.io/finance/as-the-market-burns/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/home/as-the-market-burns/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
     <loc>https://collindougherty.github.io/categories/</loc>
-    <lastmod>2022-04-10T17:15:07-05:00</lastmod>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tag/crash/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tag/housing/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tag/markets/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/category/markets/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/finance/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/home/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tag/recession/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tags/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/</loc>
+    <lastmod>2022-04-18T19:08:34-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/category/hoops/</loc>
     <lastmod>2022-04-04T12:00:37-05:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/posthome/how-i-used-machine-learning-to-solve-march-madness/</loc>
+    <loc>https://collindougherty.github.io/home/how-i-used-machine-learning-to-solve-march-madness/</loc>
     <lastmod>2022-04-04T12:00:37-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/machine-learning/</loc>
@@ -20,55 +53,40 @@
     <loc>https://collindougherty.github.io/tag/ncaa/</loc>
     <lastmod>2022-04-04T12:00:37-05:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/posthome/</loc>
-    <lastmod>2022-04-10T17:15:07-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/tags/</loc>
-    <lastmod>2022-04-10T17:15:07-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/</loc>
-    <lastmod>2022-04-10T17:15:07-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/money/</loc>
+    <loc>https://collindougherty.github.io/finance_home/</loc>
     <lastmod>2022-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/baseball/</loc>
+    <loc>https://collindougherty.github.io/baseball_home/</loc>
     <lastmod>2022-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/football/</loc>
+    <loc>https://collindougherty.github.io/football_home/</loc>
     <lastmod>2022-02-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/baseball/</loc>
     <lastmod>2022-02-16T12:51:43-06:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postbaseball/how-strike-zone-size-differs-based-on-count/</loc>
+    <loc>https://collindougherty.github.io/baseball/how-strike-zone-size-differs-based-on-count/</loc>
     <lastmod>2022-02-16T12:51:43-06:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/mlb/</loc>
     <lastmod>2022-02-16T12:51:43-06:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postbaseball/</loc>
+    <loc>https://collindougherty.github.io/baseball/</loc>
     <lastmod>2022-02-16T12:51:43-06:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/about/</loc>
     <lastmod>2022-04-10T17:15:07-05:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postfinance/about-pure-signal/</loc>
+    <loc>https://collindougherty.github.io/finance/about-pure-signal/</loc>
     <lastmod>2022-02-14T02:28:45-06:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/investing/</loc>
     <lastmod>2022-02-14T16:06:15-06:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/tag/markets/</loc>
+    <loc>https://collindougherty.github.io/finance/on-u-s-markets-and-global-peers/</loc>
     <lastmod>2022-02-14T16:06:15-06:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postfinance/on-u-s-markets-and-global-peers/</loc>
-    <lastmod>2022-02-14T16:06:15-06:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/posthome/on-u-s-markets-and-global-peers/</loc>
-    <lastmod>2022-02-14T16:06:15-06:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/postfinance/</loc>
+    <loc>https://collindougherty.github.io/home/on-u-s-markets-and-global-peers/</loc>
     <lastmod>2022-02-14T16:06:15-06:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/world/</loc>
@@ -80,13 +98,13 @@
     <loc>https://collindougherty.github.io/category/nebraska/</loc>
     <lastmod>2022-01-13T00:33:19-06:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postfootball/</loc>
+    <loc>https://collindougherty.github.io/football/</loc>
     <lastmod>2022-01-13T00:33:19-06:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postfootball/scouting-new-huskers-qb-casey-thompson/</loc>
+    <loc>https://collindougherty.github.io/football/scouting-new-huskers-qb-casey-thompson/</loc>
     <lastmod>2022-01-13T00:33:19-06:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/posthome/scouting-new-huskers-qb-casey-thompson/</loc>
+    <loc>https://collindougherty.github.io/home/scouting-new-huskers-qb-casey-thompson/</loc>
     <lastmod>2022-01-13T00:33:19-06:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/2021/</loc>
@@ -95,31 +113,31 @@
     <loc>https://collindougherty.github.io/tag/college-football/</loc>
     <lastmod>2021-12-05T15:05:18-06:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postfootball/is-georgia-s-defense-the-best-of-the-21st-century/</loc>
+    <loc>https://collindougherty.github.io/football/is-georgia-s-defense-the-best-of-the-21st-century/</loc>
     <lastmod>2021-12-05T15:05:18-06:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/category/power-rankings/</loc>
     <lastmod>2021-10-26T20:06:42-05:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postfootball/power-rankings-2021/</loc>
+    <loc>https://collindougherty.github.io/football/power-rankings-2021/</loc>
     <lastmod>2021-10-26T20:06:42-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/rankings/</loc>
     <lastmod>2021-10-26T20:06:42-05:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postfootball/nebraska-cursed-or-consistent/</loc>
+    <loc>https://collindougherty.github.io/football/nebraska-cursed-or-consistent/</loc>
     <lastmod>2021-10-25T21:10:33-05:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/posthome/nebraska-cursed-or-consistent/</loc>
+    <loc>https://collindougherty.github.io/home/nebraska-cursed-or-consistent/</loc>
     <lastmod>2021-10-25T21:10:33-05:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/postfootball/the-big-blowouts-of-2019/</loc>
+    <loc>https://collindougherty.github.io/football/the-big-blowouts-of-2019/</loc>
     <lastmod>2021-10-25T16:39:42-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/category/about/</loc>
     <lastmod>2022-04-10T17:15:07-05:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/posthome/about-the-forecaster/</loc>
+    <loc>https://collindougherty.github.io/home/about-the-forecaster/</loc>
     <lastmod>2022-04-10T17:15:07-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/admin/</loc>
