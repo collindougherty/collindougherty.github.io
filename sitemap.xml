@@ -2,31 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://collindougherty.github.io/categories/</loc>
-    <lastmod>2022-05-01T21:00:24-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/category/hoops/</loc>
-    <lastmod>2022-05-01T21:00:24-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/tag/machine-learning/</loc>
-    <lastmod>2022-05-01T21:00:24-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/featured/post-mortem-gambling-on-the-nba/</loc>
-    <lastmod>2022-05-01T21:00:24-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/featured/</loc>
-    <lastmod>2022-05-01T21:00:24-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/tags/</loc>
-    <lastmod>2022-05-01T21:00:24-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/</loc>
-    <lastmod>2022-05-01T21:00:24-05:00</lastmod>
-  </url><url>
     <loc>https://collindougherty.github.io/featured/as-the-market-burns/</loc>
     <lastmod>2022-04-18T23:26:21-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/finance/as-the-market-burns/</loc>
+    <lastmod>2022-04-18T23:26:21-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/categories/</loc>
     <lastmod>2022-04-18T23:26:21-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/crash/</loc>
@@ -41,13 +23,28 @@
     <loc>https://collindougherty.github.io/category/markets/</loc>
     <lastmod>2022-04-18T23:26:21-05:00</lastmod>
   </url><url>
+    <loc>https://collindougherty.github.io/featured/</loc>
+    <lastmod>2022-04-18T23:26:21-05:00</lastmod>
+  </url><url>
     <loc>https://collindougherty.github.io/finance/</loc>
     <lastmod>2022-04-18T23:26:21-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/recession/</loc>
     <lastmod>2022-04-18T23:26:21-05:00</lastmod>
   </url><url>
+    <loc>https://collindougherty.github.io/tags/</loc>
+    <lastmod>2022-04-18T23:26:21-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/</loc>
+    <lastmod>2022-04-18T23:26:21-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/category/hoops/</loc>
+    <lastmod>2022-04-04T12:00:37-05:00</lastmod>
+  </url><url>
     <loc>https://collindougherty.github.io/featured/how-i-used-machine-learning-to-solve-march-madness/</loc>
+    <lastmod>2022-04-04T12:00:37-05:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tag/machine-learning/</loc>
     <lastmod>2022-04-04T12:00:37-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/march-madness/</loc>

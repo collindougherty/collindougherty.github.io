@@ -5,28 +5,12 @@
     <link>https://collindougherty.github.io/</link>
       <atom:link href="https://collindougherty.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>the forecaster</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://collindougherty.github.io/media/icon_huab95def157338f74d8ed74c4d7fc7d51_16289_512x512_fill_lanczos_center_3.png</url>
       <title>the forecaster</title>
       <link>https://collindougherty.github.io/</link>
     </image>
-    
-    <item>
-      <title>Post Mortem: Gambling on the NBA</title>
-      <link>https://collindougherty.github.io/featured/post-mortem-gambling-on-the-nba/</link>
-      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/featured/post-mortem-gambling-on-the-nba/</guid>
-      <description>
-&lt;script src=&#34;https://collindougherty.github.io/featured/post-mortem-gambling-on-the-nba/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;All sports fans wonder at some point or another whether they can beat Vegas. We feel knowledgeable in our sports and want to test our edge. My time to gamble finally came, as part of a college assignment no less. As the NBA playoffs kicked off, our advanced sports data analysis class had the opportunity to implement some of the machine learning models we have been designing – this time for the ultimate test – to beat Vegas.&lt;/p&gt;
-&lt;p&gt;Full disclosure, my project group doesn’t particularly follow the NBA. So, we needed all the help and luck we could get. To build our model, we focused particularly on season long statistics found on basketball reference for each of the league’s NBA teams. We utilized factors such as SRS, offensive rebounding percentage, defensive rebounding percentage, turnovers, shooting and more. We also considered some of the more recent stats in order to try and account for injuries or trades midseason.&lt;/p&gt;
-&lt;p&gt;Our model proved to be a helpful addition to our own intuition, aiding us in spotting where win probabilities may not have been in alignment with the odds being given by Vegas. Our results were extremely successful, as we were one of the most profitable in the class, nearly doubling our fake gambling money, making almost $1400 compared to our initial $1500. We went 18-14 overall in our picks. For our non-modeled subjective decision making, we mainly considered injuries, the record in the series, who was at home, and various similar factors.&lt;/p&gt;
-&lt;p&gt;While our results were certainly impressive, I left with the impression that it is not a long-term profitable strategy to try and beat Vegas. Realistically, the model we whipped up in a couple classes utilizing a random forest and basic team stats has no shot of outperforming Vegas in the long run. More than anything, the project highlighted the role of chance and probability in basketball and sports in general. Maybe someday we’ll conquer Vegas, but I left the project with the indelible impression that the old saying, “Vegas knows”, is in fact true.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>As the Market Burns</title>
