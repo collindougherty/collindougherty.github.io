@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sports Analytics | the forecaster</title>
-    <link>https://collindougherty.github.io/tag/sports-analytics/</link>
-      <atom:link href="https://collindougherty.github.io/tag/sports-analytics/index.xml" rel="self" type="application/rss+xml" />
-    <description>Sports Analytics</description>
+    <title>Case Study | the forecaster</title>
+    <link>https://collindougherty.github.io/tag/case-study/</link>
+      <atom:link href="https://collindougherty.github.io/tag/case-study/index.xml" rel="self" type="application/rss+xml" />
+    <description>Case Study</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://collindougherty.github.io/media/icon_huab95def157338f74d8ed74c4d7fc7d51_16289_512x512_fill_lanczos_center_3.png</url>
-      <title>Sports Analytics</title>
-      <link>https://collindougherty.github.io/tag/sports-analytics/</link>
+      <title>Case Study</title>
+      <link>https://collindougherty.github.io/tag/case-study/</link>
     </image>
     
     <item>

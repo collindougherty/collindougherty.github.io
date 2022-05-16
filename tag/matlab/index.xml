@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | the forecaster</title>
-    <link>https://collindougherty.github.io/project/</link>
-      <atom:link href="https://collindougherty.github.io/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
+    <title>Matlab | the forecaster</title>
+    <link>https://collindougherty.github.io/tag/matlab/</link>
+      <atom:link href="https://collindougherty.github.io/tag/matlab/index.xml" rel="self" type="application/rss+xml" />
+    <description>Matlab</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://collindougherty.github.io/media/icon_huab95def157338f74d8ed74c4d7fc7d51_16289_512x512_fill_lanczos_center_3.png</url>
-      <title>Projects</title>
-      <link>https://collindougherty.github.io/project/</link>
+      <title>Matlab</title>
+      <link>https://collindougherty.github.io/tag/matlab/</link>
     </image>
-    
-    <item>
-      <title>Mathletics - How the Science of Numbers is Changing Sports</title>
-      <link>https://collindougherty.github.io/project/qual-writing-sample/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://collindougherty.github.io/project/qual-writing-sample/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Zombies vs Humans - Mathematically Modeling &#34;I Am Legend&#34;</title>
