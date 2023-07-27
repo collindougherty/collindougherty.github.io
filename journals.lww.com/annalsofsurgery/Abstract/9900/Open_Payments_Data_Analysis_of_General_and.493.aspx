@@ -909,21 +909,17 @@
 
     <div class="space-below"></div>
 
-    <div class="article-style"><h1 id="div-classalert-alert-note"><div class="alert alert-note"></h1>
+    <div class="article-style"><div class="alert alert-note">
   <div>
-    <h1 id="click-the-cite-button-above-to-demo-the-feature-to-enable-visitors-to-import-publication-metadata-into-their-reference-management-software">Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.</h1>
-<h1 id="heading"></h1>
+    Click the <em>Cite</em> button above to demo the feature to enable visitors to import publication metadata into their reference management software.
   </div>
 </div>
-<h1 id="heading"></h1>
-<h1 id="div-classalert-alert-note-1"><div class="alert alert-note"></h1>
+<div class="alert alert-note">
   <div>
-    <h1 id="create-your-slides-in-markdown---click-the-slides-button-to-check-out-the-example">Create your slides in Markdown - click the <em>Slides</em> button to check out the example.</h1>
-<h1 id="heading"></h1>
+    Create your slides in Markdown - click the <em>Slides</em> button to check out the example.
   </div>
 </div>
-<h1 id="heading-1"></h1>
-<h1 id="supplementary-notes-can-be-added-here-including-code-math-and-imageshttpswowchemycomdocswriting-markdown-latex">Supplementary notes can be added here, including <a href="https://wowchemy.com/docs/writing-markdown-latex/" target="_blank" rel="noopener">code, math, and images</a>.</h1>
+<p>#Supplementary notes can be added here, including <a href="https://wowchemy.com/docs/writing-markdown-latex/" target="_blank" rel="noopener">code, math, and images</a>.</p>
 </div>
 
     
