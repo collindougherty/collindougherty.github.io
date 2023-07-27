@@ -820,8 +820,14 @@
 
 
   
+    
+  
 
 
+
+<a class="btn btn-outline-primary btn-page-header" href="https://collindougherty.github.io/#" target="_blank" rel="noopener">
+  PDF
+</a>
 
 
 
@@ -831,15 +837,67 @@
 </a>
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://collindougherty.github.io/#" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://collindougherty.github.io/#" target="_blank" rel="noopener">
+  Dataset
+</a>
 
 
 
+<a class="btn btn-outline-primary btn-page-header" href="#" target="_blank" rel="noopener">
+  Project
+</a>
 
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://collindougherty.github.io/#" target="_blank" rel="noopener">
+  Poster
+</a>
 
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://collindougherty.github.io/#" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://collindougherty.github.io/#" target="_blank" rel="noopener">
+  Video
+</a>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://collindougherty.github.io/#" target="_blank" rel="noopener">
+  Source Document
+</a>
 
 
 <a class="btn btn-outline-primary btn-page-header" href="https://doi.org/10.1097/SLA.0000000000005951" target="_blank" rel="noopener">
