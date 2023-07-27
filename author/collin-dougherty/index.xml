@@ -5,12 +5,35 @@
     <link>https://collindougherty.github.io/author/collin-dougherty/</link>
       <atom:link href="https://collindougherty.github.io/author/collin-dougherty/index.xml" rel="self" type="application/rss+xml" />
     <description>Collin Dougherty</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://collindougherty.github.io/author/collin-dougherty/avatar_hu849462cfeae1ac0208158083e9b00e70_792495_270x270_fill_q75_lanczos_center.jpg</url>
       <title>Collin Dougherty</title>
       <link>https://collindougherty.github.io/author/collin-dougherty/</link>
     </image>
+    
+    <item>
+      <title>Open Payments Data Analysis of General and Fellowship-trained Surgeons Receiving Industry General Payments from 2016 to 2020: Payment Disparities and COVID-19 Pandemic Impact</title>
+      <link>https://collindougherty.github.io/journals.lww.com/annalsofsurgery/Abstract/9900/Open_Payments_Data_Analysis_of_General_and.493.aspx</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://collindougherty.github.io/journals.lww.com/annalsofsurgery/Abstract/9900/Open_Payments_Data_Analysis_of_General_and.493.aspx</guid>
+      <description>&lt;h1 id=&#34;div-classalert-alert-note&#34;&gt;&lt;div class=&#34;alert alert-note&#34;&gt;&lt;/h1&gt;
+  &lt;div&gt;
+    &lt;h1 id=&#34;click-the-cite-button-above-to-demo-the-feature-to-enable-visitors-to-import-publication-metadata-into-their-reference-management-software&#34;&gt;Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.&lt;/h1&gt;
+&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;div-classalert-alert-note-1&#34;&gt;&lt;div class=&#34;alert alert-note&#34;&gt;&lt;/h1&gt;
+  &lt;div&gt;
+    &lt;h1 id=&#34;create-your-slides-in-markdown---click-the-slides-button-to-check-out-the-example&#34;&gt;Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.&lt;/h1&gt;
+&lt;h1 id=&#34;heading&#34;&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;heading-1&#34;&gt;&lt;/h1&gt;
+&lt;h1 id=&#34;supplementary-notes-can-be-added-here-including-code-math-and-imageshttpswowchemycomdocswriting-markdown-latex&#34;&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/h1&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

@@ -2,8 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://collindougherty.github.io/publication-type/2/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/authors/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/author/collin-dougherty/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://collindougherty.github.io/</loc>
-    <lastmod>2022-06-24T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/author/david-w-mercer/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/author/hannah-nelson/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/author/heng-jiang/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/author/joshua-m-v-mammen/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/author/juan-a-santamaria-barria/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/journals.lww.com/annalsofsurgery/Abstract/9900/Open_Payments_Data_Analysis_of_General_and.493.aspx</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/publication_types/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/publication/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/author/shinobu-watanabe-galloway/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/author/snehal-jadhav/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tag/source-themes/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tags/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/project/in-play-probability/</loc>
     <lastmod>2022-06-24T00:00:00+00:00</lastmod>
@@ -12,9 +57,6 @@
     <lastmod>2022-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/sports-analytics/</loc>
-    <lastmod>2022-06-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/tags/</loc>
     <lastmod>2022-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/featured/as-the-market-burns/</loc>
@@ -117,11 +159,5 @@
     <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/admin/</loc>
-  </url><url>
-    <loc>https://collindougherty.github.io/authors/</loc>
-  </url><url>
-    <loc>https://collindougherty.github.io/author/collin-dougherty/</loc>
-  </url><url>
-    <loc>https://collindougherty.github.io/publication_types/</loc>
   </url>
 </urlset>
