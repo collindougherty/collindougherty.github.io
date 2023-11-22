@@ -2,13 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://collindougherty.github.io/categories/</loc>
+    <lastmod>2023-11-21T00:33:19-06:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/</loc>
+    <lastmod>2023-11-21T00:33:19-06:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tag/history/</loc>
+    <lastmod>2023-11-21T00:33:19-06:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/featured/</loc>
+    <lastmod>2023-11-21T00:33:19-06:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tag/psychology/</loc>
+    <lastmod>2023-11-21T00:33:19-06:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/category/psychology/</loc>
+    <lastmod>2023-11-21T00:33:19-06:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tag/research/</loc>
+    <lastmod>2023-11-21T00:33:19-06:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/tags/</loc>
+    <lastmod>2023-11-21T00:33:19-06:00</lastmod>
+  </url><url>
+    <loc>https://collindougherty.github.io/featured/incentives-of-academia/</loc>
+    <lastmod>2023-11-21T00:33:19-06:00</lastmod>
+  </url><url>
     <loc>https://collindougherty.github.io/publication-type/2/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/authors/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/author/collin-dougherty/</loc>
@@ -53,13 +77,7 @@
     <loc>https://collindougherty.github.io/tag/sports-analytics/</loc>
     <lastmod>2022-06-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://collindougherty.github.io/tags/</loc>
-    <lastmod>2022-06-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://collindougherty.github.io/featured/as-the-market-burns/</loc>
-    <lastmod>2022-04-18T23:26:21-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/categories/</loc>
     <lastmod>2022-04-18T23:26:21-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/crash/</loc>
@@ -72,9 +90,6 @@
     <lastmod>2022-04-18T23:26:21-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/category/markets/</loc>
-    <lastmod>2022-04-18T23:26:21-05:00</lastmod>
-  </url><url>
-    <loc>https://collindougherty.github.io/featured/</loc>
     <lastmod>2022-04-18T23:26:21-05:00</lastmod>
   </url><url>
     <loc>https://collindougherty.github.io/tag/recession/</loc>
