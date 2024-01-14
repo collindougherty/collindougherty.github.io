@@ -57,6 +57,26 @@
             display: flex;
             gap: 0.5rem;
         }
+        .contact-card {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .contact-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .contact-info {
+            margin-bottom: 1rem;
+        }
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -70,41 +90,16 @@
         <!-- Black divider line -->
         <div class="divider"></div>
 
-        <!-- About Me Section -->
-        <div class="about-me">
-            <p>Hey, I'm Collin! I love tech, sports, and psychology. I currently work at UNMC in Omaha, NE as a cancer researcher. 
-                Before that, I built machine learning models for Husker athletics to aid in playing time decisions.<p>
-        </div>
-
-        <!-- Contact Links centered over newsletter -->
-        <div class="grid-2-cols mb-10">
-            <!-- Repeat this block for each link -->
-            <div class="mb-4">
-                <a href="https://twitter.com/collind0ugherty" class="text-gray-800 hover:underline">Twitter -></a> 
-            </div>
-            <!-- ... other contact links ... -->
-            <div class="mb-4">
-                <a href="blog.html" class="text-gray-800 hover:underline">Blog -></a> 
-            </div>
-            <div class="mb-4">
-                <a href="https://scholar.google.co.uk/citations?user=nc_-J9QAAAAJ" class="text-gray-800 hover:underline">Publications -></a>
-            </div>
-            <div class="mb-4">
-                <a href="projects.html" class="text-gray-800 hover:underline">Projects -></a> 
-            </div>
-            <div class="mb-4">
-                <a href="resume.html" class="text-gray-800 hover:underline">Resume -></a> 
-            </div>
-            <div class="mb-4">
-                <a href="https://github.com/collindougherty" class="text-gray-800 hover:underline">GitHub -></a> 
-            </div>
-            <div class="mb-4">
-                <a href="https://www.linkedin.com/in/collin-dougherty/" class="text-gray-800 hover:underline">LinkedIn -></a> 
-            </div>
-            <div class="mb-4">
-                <a href="contact.html" class="text-gray-800 hover:underline">Contact -></a> 
-            </div>
-        </div>
+        <body class="bg-gray-100">
+            <div class="content">
+                <!-- Contact Card -->
+                <div class="contact-card">
+                    <div class="contact-title">Email</div>
+                    <div class="contact-info">
+                        <p>Feel free to reach out to me via email:</p>
+                        <a href="mailto:collindougherty99@gmail.com">collindougherty99@gmail.com</a>
+                    </div>
+                </div>
 
         <!-- Newsletter Section -->
         <div class="bg-gray-100 rounded-lg p-8 mb-10">
@@ -117,7 +112,6 @@
             <p id="thankYouMessage" class="text-gray-600 mt-4" style="display: none;">Thank you for signing up!</p>
         </div>
 
-
         <!-- Black divider line -->
         <div class="divider"></div>
 
@@ -125,7 +119,7 @@
         <div class="footer-container">
             <p class="text-gray-600">&copy; 2024 - Collin Dougherty</p>
             <div class="footer-links">
-                <a href="#" class="hover:underline">Home</a>
+                <a href="index.html" class="hover:underline">Home</a>
                 <span>|</span>
                 <a href="projects.html" class="hover:underline">Projects</a>
                 <span>|</span>
@@ -136,16 +130,4 @@
         </div>
     </div>
 </body>
-
-<script>
-    document.getElementById("signUpButton").onclick = function() {
-        var email = document.getElementById("emailInput").value;
-        if(email) { // Simple validation to check if email is entered
-            document.getElementById("thankYouMessage").style.display = "block";
-        } else {
-            alert("Please enter your email.");
-        }
-    };
-</script>
-
 </html>

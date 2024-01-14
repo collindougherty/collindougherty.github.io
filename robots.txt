@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://collindougherty.github.io/sitemap.xml
