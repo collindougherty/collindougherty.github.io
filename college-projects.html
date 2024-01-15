@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>College Work Samples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body, button, input, a {
+            font-family: 'American Typewriter', Courier, monospace;
+        }
+        .content {
+            max-width: 640px;
+            margin: auto;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .bottom_divider {
+            height: 1px;
+            background-color: black;
+            margin: 2rem 0;
+        }
+        .blog-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .blog-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .blog-date {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 2rem;
+        }
+        .blog-content {
+            line-height: 1.6;
+            color: #374151;
+            margin-bottom: 2rem;
+        }
+        .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.875rem; /* Same size as Tailwind's text-sm */
+        }
+        .footer-links {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .heading {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
+        }
+        @media only screen and (max-width: 600px) {
+            .footer-links a:nth-child(n+2) { /* Hides all links except the first one */
+                display: none;
+            }
+            .footer-links span {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .newsletter-form input {
+                flex-grow: 0;
+                max-width: 150px; /* Adjust as needed */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="content">
+        <!-- Blog Header -->
+        <div class="blog-header">
+            <div class="blog-title">A collection of my favorite projects in undergrad</div>
+            <div class="blog-date">Published on May 1, 2022</div>
+        </div>
+
+        <!-- Blog Content -->
+        <div class="blog-content">
+            <div class = "heading">
+                Mathematically Modeling a Zombie Apocalypse
+            </div>
+                <a href="zombies.pdf" class="hover:underline">PDF here.</a>
+            <p>This project in a freshman year Differential Equations class ended up laying the foundations for mathematical epidemiology,
+                which I ended up relying on extensively in the project below...</p>
+
+            <div class = "heading">
+                Modeling the Spread of COVID-19 in the United States
+            </div>
+                <a href="covid-project.pdf" class="hover:underline">PDF here.</a>
+
+            <p>This project in a capstone junior year Mathematical Modeling class was proved
+                very well timed, just as COVID-19 was beginning to spread, and before we understood much of the disease.
+            </div>
+
+
+        <!-- Black divider line -->
+        <div class="bottom_divider"></div>
+
+        <!-- Footer Section -->
+        <div class="footer-container">
+            <p class="text-gray-600">&copy; 2024 - Collin Dougherty</p>
+            <div class="footer-links">
+                <a href="index.html" class="hover:underline">Home</a>
+                <span>|</span>
+                <a href="projects.html" class="hover:underline">Projects</a>
+                <span>|</span>
+                <a href="blog.html" class="hover:underline">Thoughts</a>
+                <span>|</span>
+                <a href="contact.html" class="hover:underline">Contact</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
