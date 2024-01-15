@@ -64,6 +64,20 @@
             display: flex;
             gap: 0.5rem;
         }
+        @media only screen and (max-width: 600px) {
+            .footer-links a:nth-child(n+2) { /* Hides all links except the first one */
+                display: none;
+            }
+            .footer-links span {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .newsletter-form input {
+                flex-grow: 0;
+                max-width: 150px; /* Adjust as needed */
+            }
+        }
     </style>
 
 </head>
