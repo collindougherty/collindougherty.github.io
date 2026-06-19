@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omaha Metro Crime Heat Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #e0e0e0; }
+#map { width: 100vw; height: 100vh; z-index: 1; }
+
+.control-panel {
+  position: absolute; top: 12px; right: 12px; z-index: 1000;
+  background: rgba(10,10,10,0.94); border: 1px solid #333; border-radius: 8px;
+  padding: 16px; width: 290px; max-height: calc(100vh - 24px); overflow-y: auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.control-panel h2 { font-size: 15px; margin-bottom: 12px; color: #44cc66; text-transform: uppercase; letter-spacing: 1px; }
+.control-section { margin-bottom: 14px; position: relative; }
+.control-section label { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #888; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.control-section select, .control-section input[type="range"] { width: 100%; background: #1a1a1a; border: 1px solid #444; color: #fff; padding: 6px 8px; border-radius: 4px; font-size: 13px; }
+.control-section select:focus { outline: none; border-color: #44cc66; }
+
+.info-btn {
+  width: 14px; height: 14px; border-radius: 50%; border: 1px solid #666;
+  background: transparent; color: #888; font-size: 9px; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-style: italic; font-family: Georgia, serif; flex-shrink: 0;
+  position: relative;
+}
+.info-btn:hover { border-color: #aaa; color: #ccc; }
+.info-tooltip {
+  display: none; position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+  background: rgba(20,20,20,0.97); border: 1px solid #555; border-radius: 6px;
+  padding: 10px 12px; width: 240px; font-size: 11px; color: #ccc;
+  line-height: 1.5; z-index: 2000; pointer-events: none;
+  text-transform: none; letter-spacing: 0; font-style: normal; font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+}
+.info-tooltip::after {
+  content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  border: 6px solid transparent; border-top-color: #555;
+}
+.info-btn:hover .info-tooltip { display: block; }
+
+.category-buttons { display: flex; flex-wrap: wrap; gap: 6px; }
+.cat-btn {
+  flex: 1; min-width: 50px; padding: 8px 4px; border: 1px solid #444;
+  background: #1a1a1a; color: #ccc; border-radius: 4px; cursor: pointer;
+  font-size: 11px; text-align: center; transition: all 0.2s;
+}
+.cat-btn:hover { border-color: #888; }
+.cat-btn.active { border-color: #44cc66; background: #0d2215; color: #66dd88; }
+.cat-btn .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 3px; vertical-align: middle; }
+.cat-btn .dot.all { background: linear-gradient(135deg, #00cc44, #ffcc00); }
+.cat-btn .dot.murder { background: #ff2200; }
+.cat-btn .dot.violent { background: #ff6600; }
+.cat-btn .dot.petty { background: #ccaa00; }
+.cat-btn .dot.other { background: #558855; }
+
+.view-toggle { display: flex; gap: 6px; }
+.toggle-btn {
+  flex: 1; padding: 10px 8px; border: 1px solid #444;
+  background: #1a1a1a; color: #ccc; border-radius: 4px; cursor: pointer;
+  font-size: 12px; text-align: center; transition: all 0.2s;
+}
+.toggle-btn:hover { border-color: #888; }
+.toggle-btn.active { border-color: #44cc66; background: #0d2215; color: #66dd88; font-weight: 600; }
+
+.stats-bar {
+  position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 1000;
+  background: rgba(10,10,10,0.92); border: 1px solid #333; border-radius: 6px;
+  padding: 10px 20px; display: flex; gap: 24px; font-size: 12px;
+  backdrop-filter: blur(10px);
+}
+.stats-bar .stat { text-align: center; }
+.stats-bar .stat .num { font-size: 18px; font-weight: 700; color: #44cc66; }
+.stats-bar .stat .lbl { color: #888; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.title-bar {
+  position: absolute; top: 12px; left: 12px; z-index: 1000;
+  background: rgba(10,10,10,0.94); border: 1px solid #333; border-radius: 8px;
+  padding: 12px 16px; backdrop-filter: blur(10px);
+}
+.title-bar h1 { font-size: 16px; font-weight: 700; color: #fff; }
+.title-bar .sub { font-size: 11px; color: #888; margin-top: 2px; }
+
+.grid-info {
+  font-size: 11px; color: #666; text-align: right; margin-top: 4px;
+}
+
+.loading {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  z-index: 2000; text-align: center;
+}
+.loading .spinner {
+  width: 40px; height: 40px; border: 3px solid #333;
+  border-top-color: #44cc66; border-radius: 50%;
+  animation: spin 0.8s linear infinite; margin: 0 auto 12px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.leaflet-control-zoom a { background: rgba(10,10,10,0.9) !important; color: #ccc !important; border-color: #444 !important; }
+.leaflet-control-zoom a:hover { background: rgba(30,30,30,0.9) !important; }
+
+.legend-bar {
+  position: absolute; bottom: 60px; right: 12px; z-index: 1000;
+  background: rgba(10,10,10,0.92); border: 1px solid #333; border-radius: 6px;
+  padding: 10px 14px; backdrop-filter: blur(10px);
+}
+.legend-bar .legend-title { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.legend-bar .legend-row { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; font-size: 11px; color: #aaa; }
+.legend-bar .legend-swatch { width: 28px; height: 10px; border-radius: 2px; border: 1px solid #444; }
+
+.leaflet-interactive { filter: blur(0.3px); }
+
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  <div>Loading crime data...</div>
+</div>
+
+<div id="map"></div>
+
+<div class="title-bar">
+  <h1>OMAHA METRO CRIME MAP</h1>
+  <div class="sub">Douglas Co + Sarpy Co + Council Bluffs + Omaha PD</div>
+</div>
+
+<div class="control-panel">
+  <h2>Controls</h2>
+
+  <div class="control-section">
+    <label>View Mode</label>
+    <div class="view-toggle">
+      <div class="toggle-btn active" id="toggleGrid" onclick="setViewMode('grid')">Grid</div>
+      <div class="toggle-btn" id="toggleCensus" onclick="setViewMode('census')">Per Capita</div>
+      <div class="toggle-btn" id="toggleTemporal" onclick="setViewMode('temporal')">Temporal</div>
+    </div>
+  </div>
+
+  <div class="control-section">
+    <label>Crime Category</label>
+    <div class="category-buttons">
+      <div class="cat-btn active" data-cat="all"><span class="dot all"></span>All</div>
+      <div class="cat-btn" data-cat="murder"><span class="dot murder"></span>Murder</div>
+      <div class="cat-btn" data-cat="violent"><span class="dot violent"></span>Violent</div>
+      <div class="cat-btn" data-cat="petty"><span class="dot petty"></span>Petty</div>
+      <div class="cat-btn" data-cat="other"><span class="dot other"></span>Other</div>
+    </div>
+  </div>
+
+  <div class="control-section">
+    <label>
+      Year
+      <span class="info-btn">i
+        <span class="info-tooltip">Filter by year or view all combined.</span>
+      </span>
+    </label>
+    <select id="yearSelect">
+      <option value="all">All Years (2015-2026)</option>
+      <option value="2026">2026</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+      <option value="2018">2018</option>
+      <option value="2017">2017</option>
+      <option value="2016">2016</option>
+      <option value="2015">2015</option>
+    </select>
+  </div>
+
+  <div class="control-section hidden" id="censusModeControl">
+    <label>Display Mode</label>
+    <div class="view-toggle">
+      <div class="toggle-btn active" id="togglePerCapita" onclick="setCensusMode('percapita')">Per Capita</div>
+      <div class="toggle-btn" id="toggleRaw" onclick="setCensusMode('raw')">Raw Total</div>
+    </div>
+  </div>
+
+  <div class="control-section hidden" id="regionTypeControl">
+    <label>Region Type</label>
+    <div class="view-toggle">
+      <div class="toggle-btn" id="toggleBlkgrp" onclick="setRegionType('blkgrp')">Block Group</div>
+      <div class="toggle-btn active" id="toggleTract" onclick="setRegionType('tract')">Tract</div>
+      <div class="toggle-btn" id="toggleZip" onclick="setRegionType('zip')">Zip Code</div>
+    </div>
+  </div>
+
+  <div class="control-section hidden" id="temporalControls">
+    <label>Granularity</label>
+    <div class="view-toggle">
+      <div class="toggle-btn" id="toggleGranYear" onclick="setTemporalGran('year')">Year</div>
+      <div class="toggle-btn active" id="toggleGranQuarter" onclick="setTemporalGran('quarter')">Quarter</div>
+      <div class="toggle-btn" id="toggleGranMonth" onclick="setTemporalGran('month')">Month</div>
+    </div>
+    <div style="margin-top: 12px; display: flex; align-items: center; gap: 8px;">
+      <button id="playBtn" onclick="togglePlay()" style="width:32px;height:32px;border:1px solid #444;background:#1a1a1a;color:#ccc;border-radius:4px;cursor:pointer;font-size:14px;">&#9654;</button>
+      <span id="temporalLabel" style="font-size:13px;color:#ccc;min-width:80px;">All</span>
+    </div>
+    <input type="range" id="timeSlider" min="0" max="1" value="0" style="width:100%;margin-top:8px;">
+    <div style="margin-top: 8px;">
+      <label>Speed: <span id="speedVal">3</span></label>
+      <input type="range" id="speedSlider" min="1" max="10" value="3" step="1" style="width:100%;">
+    </div>
+    <div class="grid-info" id="temporalInfo"></div>
+  </div>
+
+  <div class="control-section" id="gridControl">
+    <label>
+      Grid Size: <span id="gridVal">0.5</span> mi
+      <span class="info-btn">i
+        <span class="info-tooltip">
+          <strong>Grid Size</strong><br>
+          Each square on the map covers this many miles. The count inside each square is the number of crimes in that area. Smaller = finer detail, larger = broader trends.
+        </span>
+      </span>
+    </label>
+    <input type="range" id="gridSlider" min="0.1" max="2.0" step="0.1" value="0.5">
+  </div>
+
+  <div class="control-section">
+    <label>
+      Opacity: <span id="opacityVal">0.45</span>
+    </label>
+    <input type="range" id="opacitySlider" min="0.10" max="1.00" step="0.05" value="0.45">
+  </div>
+
+  <div class="grid-info" id="gridInfo"></div>
+
+  <div style="margin-top:10px;border-top:1px solid #333;padding-top:10px;">
+    <div class="legend-title">Data Availability</div>
+    <div id="availContent" style="font-size:9px;line-height:1.5;"></div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="num" id="statTotal">-</div><div class="lbl">Total</div></div>
+  <div class="stat"><div class="num" id="statShowing">-</div><div class="lbl">Showing</div></div>
+  <div class="stat"><div class="num" id="statMax">-</div><div class="lbl">Max</div></div>
+  <div class="stat"><div class="num" id="statCells">-</div><div class="lbl" id="statCellsLabel">Cells</div></div>
+</div>
+
+<div class="legend-bar" id="legend"></div>
+<div id="clickHint" style="position:absolute;top:72px;left:12px;background:rgba(0,0,0,0.6);color:#ccc;font-size:11px;padding:4px 12px;border-radius:10px;z-index:1000;pointer-events:none;white-space:nowrap">Click a cell to see crime over time</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {
+  const map = L.map('map', {
+    center: [41.22, -95.98],
+    zoom: 11,
+    zoomControl: true
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    maxZoom: 19
+  }).addTo(map);
+
+  let allData = null;
+  let gridLayer = null;
+  let censusLayer = null;
+  let currentCat = 'all';
+  let currentYear = 'all';
+  let viewMode = 'grid';
+  let censusMode = 'percapita';
+  let regionType = 'tract';
+  let opacity = 0.45;
+  let temporalGran = 'quarter';
+  let temporalPeriods = [];
+  let temporalIdx = 0;
+  let temporalPlaying = false;
+  let temporalTimer = null;
+  let temporalLayer = null;
+
+  // Point-in-polygon (ray casting)
+  function pointInPolygon(lat, lng, polygon) {
+    let inside = false;
+    for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+      const yi = polygon[i][1], xi = polygon[i][0];
+      const yj = polygon[j][1], xj = polygon[j][0];
+      if (((yi > lat) !== (yj > lat)) && (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi)) {
+        inside = !inside;
+      }
+    }
+    return inside;
+  }
+
+  // Extract polygon coordinates from GeoJSON geometry
+  function getPolygons(geom) {
+    if (!geom) return [];
+    if (geom.type === 'Polygon') return [geom.coordinates[0]];
+    if (geom.type === 'MultiPolygon') return geom.coordinates.map(p => p[0]);
+    return [];
+  }
+
+  function percentileRank(arr, val) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] < val) count++;
+    }
+    return count / arr.length;
+  }
+
+  function getColor(pct) {
+    if (pct < 0.01) return 'rgba(15,70,25,0.55)';
+    if (pct < 0.25) {
+      const t = pct / 0.25;
+      return `rgb(${Math.round(13 + t * 21)},${Math.round(80 + t * 90)},${Math.round(30 + t * 38)})`;
+    }
+    if (pct < 0.5) {
+      const t = (pct - 0.25) / 0.25;
+      return `rgb(${Math.round(34 + t * 136)},${Math.round(170 + t * 30)},${Math.round(68 - t * 68)})`;
+    }
+    if (pct < 0.75) {
+      const t = (pct - 0.5) / 0.25;
+      return `rgb(${Math.round(170 + t * 85)},${Math.round(200 - t * 30)},0)`;
+    }
+    const t = (pct - 0.75) / 0.25;
+    return `rgb(255,${Math.round(170 - t * 130)},0)`;
+  }
+
+  function buildLegend(mode, useRate) {
+    const el = document.getElementById('legend');
+    const steps = [
+      { label: '0th pctile', color: 'rgba(15,70,25,0.55)' },
+      { label: '0-25th', color: 'rgba(20,100,40,0.55)' },
+      { label: '25-50th', color: 'rgba(80,185,40,0.6)' },
+      { label: '50-75th', color: 'rgba(200,190,0,0.65)' },
+      { label: '75-100th', color: 'rgba(255,60,0,0.75)' },
+    ];
+    let title = 'Crime Rate Percentile';
+    if (mode === 'grid') title = useRate ? 'Crimes/Year Percentile' : 'Crimes/Year Percentile';
+    if (mode === 'census') title = useRate ? 'Crime Rate Percentile (per 1k/yr)' : 'Crimes/Year Percentile';
+    el.innerHTML = `<div class="legend-title">${title}</div>` +
+      steps.map(s => `<div class="legend-row"><span class="legend-swatch" style="background:${s.color}"></span> ${s.label}</div>`).join('');
+  }
+
+  function buildDataAvailability() {
+    if (!allData || !allData.summary) return;
+    const el = document.getElementById('availContent');
+    const sources = {};
+    allData.summary.forEach(s => {
+      if (!sources[s.source]) sources[s.source] = {};
+      sources[s.source][s.year] = s.cnt;
+    });
+    const sourceLabels = {
+      'omaha_pd': 'Omaha PD',
+      'sarpy_county': 'Sarpy County',
+      'sarpy_sheriff': 'Sarpy Sheriff',
+      'council_bluffs': 'Council Bluffs'
+    };
+    const years = [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
+    let html = '<div style="display:flex;gap:2px;margin-bottom:4px;"><span style="width:65px;"></span>';
+    years.forEach(y => { html += `<span style="width:20px;text-align:center;">${String(y).slice(2)}</span>`; });
+    html += '</div>';
+    Object.keys(sources).sort().forEach(src => {
+      html += `<div style="display:flex;gap:2px;align-items:center;"><span style="width:65px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${sourceLabels[src]||src}</span>`;
+      years.forEach(y => {
+        const has = sources[src] && sources[src][y];
+        html += has
+          ? `<span style="width:20px;text-align:center;color:#44cc66;">&#9679;</span>`
+          : `<span style="width:20px;text-align:center;color:#333;">&#9675;</span>`;
+      });
+      html += '</div>';
+    });
+    html += '<div style="margin-top:4px;color:#666;">Filled = data available</div>';
+    el.innerHTML = html;
+  }
+
+  function getActiveYears() {
+    if (!allData || !allData.summary) return 12;
+    const years = new Set();
+    allData.summary.forEach(s => {
+      if (currentCat === 'all' || true) {
+        years.add(s.year);
+      }
+    });
+    if (currentYear !== 'all') return 1;
+    return years.size;
+  }
+
+  function filterData() {
+    if (!allData) return [];
+    return allData.features.filter(f => {
+      if (currentCat !== 'all' && f.cat !== currentCat) return false;
+      if (currentYear !== 'all' && f.year !== parseInt(currentYear)) return false;
+      return true;
+    });
+  }
+
+  function updateGrid() {
+    if (!allData || viewMode !== 'grid') return;
+    const filtered = filterData();
+    const gridSizeMiles = parseFloat(document.getElementById('gridSlider').value);
+
+    if (gridLayer) map.removeLayer(gridLayer);
+    if (censusLayer) map.removeLayer(censusLayer);
+    gridLayer = L.layerGroup();
+
+    const bounds = map.getBounds();
+    const pad = 0.02;
+    const south = bounds.getSouth() - pad;
+    const north = bounds.getNorth() + pad;
+    const west = bounds.getWest() - pad;
+    const east = bounds.getEast() + pad;
+
+    const milesPerDegLat = 69.0;
+    const milesPerDegLon = 69.0 * Math.cos((south + north) / 2 * Math.PI / 180);
+    const gridLat = gridSizeMiles / milesPerDegLat;
+    const gridLon = gridSizeMiles / milesPerDegLon;
+
+    // Fixed origin at (0,0) so grid never shifts
+    const originLat = 0;
+    const originLon = 0;
+
+    const cells = {};
+    const cellYears = {};
+    filtered.forEach(f => {
+      const row = Math.floor((f.lat - originLat) / gridLat);
+      const col = Math.floor((f.lng - originLon) / gridLon);
+      const key = `${row},${col}`;
+      cells[key] = (cells[key] || 0) + 1;
+      if (!cellYears[key]) cellYears[key] = {};
+      cellYears[key][f.year] = (cellYears[key][f.year] || 0) + 1;
+    });
+
+    // Per-year adjustment: divide by number of years of data
+    const numYears = getActiveYears();
+    const maxRawCount = Math.max(0, ...Object.values(cells));
+
+    // Precompute cell means for color coding
+    const cellMeans = {};
+    for (const key in cellYears) {
+      const yc = cellYears[key];
+      const vals = Object.values(yc).filter(v => v > 0);
+      cellMeans[key] = vals.length > 0 ? vals.reduce((a,b) => a+b, 0) / vals.length : 0;
+    }
+
+    Object.keys(cells).forEach(k => { cells[k] = cells[k] / numYears; });
+
+    const maxCount = Math.max(1, ...Object.values(cells));
+    const counts = Object.values(cells);
+
+    // Calculate visible range of cells
+    const minRow = Math.floor((south - originLat) / gridLat);
+    const maxRow = Math.floor((north - originLat) / gridLat);
+    const minCol = Math.floor((west - originLon) / gridLon);
+    const maxCol = Math.floor((east - originLon) / gridLon);
+
+    // Include 0 in percentile calculation
+    counts.push(0);
+
+    const numVisible = (maxRow - minRow + 1) * (maxCol - minCol + 1);
+
+    // Ordinal suffix
+    const ord = n => {
+      const s = ['th','st','nd','rd'];
+      const v = n % 100;
+      return n + (s[(v-20)%10] || s[v] || s[0]);
+    };
+    const catLabels = { all: 'crimes', murder: 'murders', violent: 'violent crimes', petty: 'petty crimes', other: 'other crimes' };
+    const catLabel = catLabels[currentCat] || 'crimes';
+    const allYears = [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
+
+    // Precompute per-year count arrays for percentile lookups
+    const yearCountsAll = {};
+    allYears.forEach(y => {
+      yearCountsAll[y] = Object.keys(cellYears).map(k => (cellYears[k][y] || 0));
+    });
+    const globalRecentYear = Math.max(...allYears.filter(y => yearCountsAll[y].some(c => c > 0)));
+
+    function buildPopupHtml(key) {
+      const count = cells[key] || 0;
+      const yearData = cellYears[key] || {};
+      const yCounts = allYears.map(y => yearData[y] || 0);
+      const activeYCounts = yCounts.filter(c => c > 0);
+      const mean = activeYCounts.length > 0 ? activeYCounts.reduce((a,b) => a+b, 0) / activeYCounts.length : 0;
+      const pct = percentileRank(counts, count);
+
+      // Most recent year with data for safety rating
+      let recentYear = null;
+      for (let i = allYears.length - 1; i >= 0; i--) {
+        if (yearData[allYears[i]] > 0) { recentYear = allYears[i]; break; }
+      }
+      const recentPct = recentYear ? percentileRank(yearCountsAll[recentYear], yearData[recentYear]) : 0;
+      const recentPctVal = Math.round(recentPct * 100);
+
+      let emoji, rating, ratingColor;
+      if (recentPctVal >= 75) { emoji = '🔴'; rating = 'Unsafe'; ratingColor = '#ef4444'; }
+      else if (recentPctVal >= 50) { emoji = '🟠'; rating = 'Moderate'; ratingColor = '#f97316'; }
+      else if (recentPctVal >= 25) { emoji = '🟡'; rating = 'Safe-ish'; ratingColor = '#eab308'; }
+      else { emoji = '🟢'; rating = 'Safe'; ratingColor = '#22c55e'; }
+
+      const recentLabel = recentYear ? ` (${recentYear})` : '';
+
+      // Compute percentile for each year
+      const yPcts = allYears.map(y => {
+        return yearData[y] > 0 ? percentileRank(yearCountsAll[y], yearData[y]) : 0;
+      });
+      const maxPct = Math.max(1, ...yPcts.map(p => Math.round(p * 100)));
+      const barHeight = 70;
+      const labelHeight = 22;
+
+      const yAxisHtml = `<div style="display:flex;flex-direction:column;justify-content:space-between;height:${barHeight}px;font-size:8px;color:#888;text-align:right;padding-right:4px">
+        <div>100</div>
+        <div>50</div>
+        <div>0</div>
+      </div>`;
+
+      const barsHtml = allYears.map((y, i) => {
+        const pVal = Math.round(yPcts[i] * 100);
+        const h = Math.round((pVal / 100) * barHeight);
+        const ratio = mean > 0 ? yCounts[i] / mean : 1;
+        let color;
+        const isCurrentYear = y === globalRecentYear;
+        if (yCounts[i] === 0 || isCurrentYear) { color = '#555'; }
+        else if (pVal < 25) { color = '#22c55e'; }
+        else if (pVal < 50) { color = '#86efac'; }
+        else if (pVal < 75) { color = '#eab308'; }
+        else { color = '#ef4444'; }
+        return `<div style="display:flex;flex-direction:column;align-items:center;width:14px">
+          <div style="width:14px;height:${barHeight}px;display:flex;flex-direction:column;justify-content:flex-end">
+            <div style="width:14px;height:${h}px;background:${color};border-radius:2px 2px 0 0;min-height:1px"></div>
+          </div>
+          <div style="font-size:7px;color:#999;writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);height:${labelHeight}px">${String(y).slice(2)}</div>
+        </div>`;
+      }).join('');
+
+      const pctLabel = Math.round(pct * 100);
+      const pctOrdinal = ord(pctLabel);
+
+      return `<div style="font-family:system-ui;font-size:12px;min-width:260px">
+        <div style="font-weight:600;margin-bottom:2px">${emoji} ${count.toFixed(1)} ${catLabel}/yr</div>
+        <div style="font-size:11px;margin-bottom:8px">
+          <span style="color:${ratingColor};font-weight:600">${rating}</span>
+          <span style="color:#999"> · ${pctOrdinal} overall · ${ord(recentPctVal)} in ${recentYear || 'N/A'}</span>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1px;height:${barHeight + labelHeight}px;padding:2px 0;position:relative">
+          ${yAxisHtml}
+          <div style="display:flex;align-items:flex-end;gap:1px">${barsHtml}</div>
+        </div>
+      </div>`;
+    }
+
+    // Use canvas renderer for performance with many cells
+    const canvasRenderer = L.canvas({ padding: 0.5 });
+
+    for (let r = minRow; r <= maxRow; r++) {
+      for (let c = minCol; c <= maxCol; c++) {
+        const key = `${r},${c}`;
+        const count = cells[key] || 0;
+
+        const cellSouth = originLat + r * gridLat;
+        const cellWest = originLon + c * gridLon;
+        const cellNorth = cellSouth + gridLat;
+        const cellEast = cellWest + gridLon;
+
+        const cellOpacity = count === 0 ? opacity * 0.35 : opacity;
+        const pct = percentileRank(counts, count);
+
+        L.rectangle(
+          [[cellSouth, cellWest], [cellNorth, cellEast]],
+          {
+            color: 'rgba(0,0,0,0.15)',
+            weight: 0.5,
+            fillColor: getColor(pct),
+            fillOpacity: cellOpacity,
+            renderer: canvasRenderer,
+            interactive: true
+          }
+        ).bindTooltip(`${count.toFixed(1)} ${catLabel}/yr`, { sticky: true })
+         .bindPopup(() => buildPopupHtml(key), { maxWidth: 300 })
+         .addTo(gridLayer);
+      }
+    }
+
+    gridLayer.addTo(map);
+
+    const totalShowing = filtered.length;
+    const numCells = (maxRow - minRow + 1) * (maxCol - minCol + 1);
+    document.getElementById('statTotal').textContent = allData.total.toLocaleString();
+    document.getElementById('statShowing').textContent = totalShowing.toLocaleString();
+    document.getElementById('statMax').textContent = maxRawCount.toLocaleString();
+    document.getElementById('statCells').textContent = numCells.toLocaleString();
+    document.getElementById('statCellsLabel').textContent = 'Cells';
+    document.getElementById('gridInfo').textContent = `${gridSizeMiles}mi cells \u2022 ${numCells} visible \u2022 ${numYears}yr span`;
+
+    buildLegend('grid');
+  }
+
+  function updateCensus() {
+    if (!allData || viewMode !== 'census') return;
+    const filtered = filterData();
+
+    if (gridLayer) map.removeLayer(gridLayer);
+    if (censusLayer) map.removeLayer(censusLayer);
+    censusLayer = L.layerGroup();
+
+    const regions = regionType === 'zip'
+      ? (allData.zcta || []).map(z => ({ geoid: z.geoid, label: z.zcta || z.geoid, pop: z.pop, geom: z.geom }))
+      : regionType === 'blkgrp'
+      ? (allData.block_groups || []).map(b => ({ geoid: b.geoid, label: b.blkgrp ? `${b.tract}.${b.blkgrp}` : b.geoid, pop: b.pop, geom: b.geom }))
+      : (allData.census_tracts || []).map(t => ({ geoid: t.geoid, label: t.tract || t.geoid, pop: t.pop, geom: t.geom }));
+
+    // Pre-compute centroids and build spatial grid index
+    const CELL = 0.01; // ~0.7 miles
+    const grid = {};
+    const centroids = [];
+
+    regions.forEach(t => {
+      if (!t.geom || !t.geom.coordinates) { centroids.push(null); return; }
+      let cx, cy;
+      if (t.geom.type === 'Polygon') {
+        const coords = t.geom.coordinates[0];
+        cx = coords.reduce((s, c) => s + c[0], 0) / coords.length;
+        cy = coords.reduce((s, c) => s + c[1], 0) / coords.length;
+      } else if (t.geom.type === 'MultiPolygon') {
+        const coords = t.geom.coordinates[0][0];
+        cx = coords.reduce((s, c) => s + c[0], 0) / coords.length;
+        cy = coords.reduce((s, c) => s + c[1], 0) / coords.length;
+      } else { centroids.push(null); return; }
+
+      centroids.push({ cx, cy, geoid: t.geoid });
+      const gi = Math.floor(cx / CELL);
+      const gj = Math.floor(cy / CELL);
+      for (let di = -1; di <= 1; di++) {
+        for (let dj = -1; dj <= 1; dj++) {
+          const key = `${gi+di},${gj+dj}`;
+          if (!grid[key]) grid[key] = [];
+          grid[key].push({ cx, cy, geoid: t.geoid });
+        }
+      }
+    });
+
+    // Count crimes per region using spatial grid
+    const regionCounts = {};
+    regions.forEach(t => { regionCounts[t.geoid] = 0; });
+
+    filtered.forEach(f => {
+      const gi = Math.floor(f.lng / CELL);
+      const gj = Math.floor(f.lat / CELL);
+      const key = `${gi},${gj}`;
+      const candidates = grid[key];
+      if (!candidates) return;
+      let minDist = Infinity, closest = null;
+      for (let i = 0; i < candidates.length; i++) {
+        const c = candidates[i];
+        const d = (f.lat - c.cy) ** 2 + (f.lng - c.cx) ** 2;
+        if (d < minDist) { minDist = d; closest = c.geoid; }
+      }
+      if (closest) regionCounts[closest]++;
+    });
+
+    // Calculate rates per 1000 people per year and raw counts per year
+    const numYears = getActiveYears();
+    const rates = [];
+    const rawCounts = [];
+    const regionRates = {};
+    regions.forEach(t => {
+      const count = (regionCounts[t.geoid] || 0) / numYears;
+      const pop = t.pop || 0;
+      let rate = 0;
+      if (pop > 0) {
+        rate = (count / pop) * 1000;
+      }
+      regionRates[t.geoid] = { count, rate };
+      if (pop > 0) rates.push(rate);
+      rawCounts.push(count);
+    });
+
+    const useRate = censusMode === 'percapita';
+    const values = useRate ? rates : rawCounts;
+    const maxVal = Math.max(0, ...values);
+    const maxRawCount = Math.max(0, ...rawCounts);
+
+    // Draw regions
+    regions.forEach(t => {
+      const { count, rate } = regionRates[t.geoid] || { count: 0, rate: 0 };
+      const pop = t.pop || 0;
+      const polygons = getPolygons(t.geom);
+
+      if (polygons.length === 0) return;
+
+      const val = useRate ? rate : count;
+      const hasPop = pop > 0;
+      const pct = hasPop ? percentileRank(values, val) : 0;
+
+      const latlngs = polygons.map(ring => ring.map(c => [c[1], c[0]]));
+
+      const tooltipHtml = useRate
+        ? `<b>${t.label}</b><br>${count.toFixed(1)} crimes/yr<br>Pop: ${pop.toLocaleString()}<br>Rate: ${rate.toFixed(2)} per 1k/yr`
+        : `<b>${t.label}</b><br>${count.toFixed(1)} crimes/yr<br>Pop: ${pop.toLocaleString()}`;
+
+      L.polygon(latlngs, {
+        color: 'rgba(255,255,255,0.2)',
+        weight: 1,
+        fillColor: getColor(pct),
+        fillOpacity: opacity
+      }).bindTooltip(tooltipHtml, { sticky: true }).addTo(censusLayer);
+    });
+
+    censusLayer.addTo(map);
+
+    const totalShowing = filtered.length;
+    const activeRegions = regions.filter(t => (t.pop || 0) > 0).length;
+    const regionLabel = regionType === 'zip' ? 'zip codes' : regionType === 'blkgrp' ? 'block groups' : 'census tracts';
+    document.getElementById('statTotal').textContent = allData.total.toLocaleString();
+    document.getElementById('statShowing').textContent = totalShowing.toLocaleString();
+    document.getElementById('statMax').textContent = maxRawCount.toLocaleString();
+    document.getElementById('statCells').textContent = activeRegions.toLocaleString();
+    document.getElementById('statCellsLabel').textContent = 'Regions';
+    document.getElementById('gridInfo').textContent = `${activeRegions} ${regionLabel} \u2022 ${useRate ? 'per 1k/yr' : 'per year'} \u2022 ${numYears}yr span`;
+
+    buildLegend('census', useRate);
+  }
+
+  function updateView() {
+    if (viewMode === 'grid') updateGrid();
+    else if (viewMode === 'census') updateCensus();
+  }
+
+  // --- TEMPORAL ---
+  function buildTemporalPeriods() {
+    temporalPeriods = [];
+    if (temporalGran === 'year') {
+      for (let y = 2015; y <= 2026; y++) temporalPeriods.push(y);
+    } else if (temporalGran === 'quarter') {
+      for (let y = 2015; y <= 2026; y++) {
+        for (let q = 1; q <= 4; q++) {
+          if (y === 2026 && q > 2) break;
+          temporalPeriods.push(y + '-Q' + q);
+        }
+      }
+    } else {
+      for (let y = 2015; y <= 2026; y++) {
+        const maxM = (y === 2026) ? 6 : 12;
+        for (let m = 1; m <= maxM; m++) {
+          temporalPeriods.push(y + '-' + String(m).padStart(2, '0'));
+        }
+      }
+    }
+    const slider = document.getElementById('timeSlider');
+    slider.max = temporalPeriods.length - 1;
+    slider.value = 0;
+    temporalIdx = 0;
+  }
+
+  function getPeriodKey(f) {
+    const m = f.month || 1;
+    if (temporalGran === 'year') return f.year;
+    if (temporalGran === 'quarter') return f.year + '-Q' + (Math.floor((m - 1) / 3) + 1);
+    return f.year + '-' + String(m).padStart(2, '0');
+  }
+
+  function getMonthsInPeriod(period) {
+    if (temporalGran === 'year') return 12;
+    if (temporalGran === 'quarter') return 3;
+    return 1;
+  }
+
+  function updateTemporal() {
+    if (!allData || viewMode !== 'temporal') return;
+    const filtered = filterData();
+    const gridSizeMiles = parseFloat(document.getElementById('gridSlider').value) || 0.5;
+
+    if (gridLayer) map.removeLayer(gridLayer);
+    if (censusLayer) map.removeLayer(censusLayer);
+    if (temporalLayer) map.removeLayer(temporalLayer);
+    temporalLayer = L.layerGroup();
+
+    const bounds = map.getBounds();
+    const pad = 0.02;
+    const south = bounds.getSouth() - pad;
+    const north = bounds.getNorth() + pad;
+    const west = bounds.getWest() - pad;
+    const east = bounds.getEast() + pad;
+
+    const milesPerDegLat = 69.0;
+    const milesPerDegLon = 69.0 * Math.cos((south + north) / 2 * Math.PI / 180);
+    const gridLat = gridSizeMiles / milesPerDegLat;
+    const gridLon = gridSizeMiles / milesPerDegLon;
+    const originLat = 0, originLon = 0;
+
+    const minRow = Math.floor((south - originLat) / gridLat);
+    const maxRow = Math.floor((north - originLat) / gridLat);
+    const minCol = Math.floor((west - originLon) / gridLon);
+    const maxCol = Math.floor((east - originLon) / gridLon);
+
+    // Count crimes per cell per period, and total months per period
+    const cellPeriodCounts = {};
+    const periodMonths = {};
+    const totalMonths = 12 * (2026 - 2015 + 1); // 132 months total
+
+    filtered.forEach(f => {
+      const row = Math.floor((f.lat - originLat) / gridLat);
+      const col = Math.floor((f.lng - originLon) / gridLon);
+      const key = `${row},${col}`;
+      const pk = getPeriodKey(f);
+      if (!cellPeriodCounts[key]) cellPeriodCounts[key] = {};
+      cellPeriodCounts[key][pk] = (cellPeriodCounts[key][pk] || 0) + 1;
+      periodMonths[pk] = getMonthsInPeriod(pk);
+    });
+
+    // Annualize: multiply counts by periods-per-year so mean is crimes/year
+    const periodsPerYear = temporalGran === 'year' ? 1 : temporalGran === 'quarter' ? 4 : 12;
+
+    // Calculate per-year rate for each cell in each period
+    // Mean only includes periods where the cell has data
+    const canvasRenderer = L.canvas({ padding: 0.5 });
+    const deviations = [];
+
+    for (let r = minRow; r <= maxRow; r++) {
+      for (let c = minCol; c <= maxCol; c++) {
+        const key = `${r},${c}`;
+        const periods = cellPeriodCounts[key] || {};
+        const activePeriods = Object.keys(periods).filter(k => periods[k] > 0);
+        if (activePeriods.length === 0) continue;
+        const total = activePeriods.reduce((a, k) => a + periods[k], 0);
+        const meanPerYear = (total / activePeriods.length) * periodsPerYear;
+        deviations.push({ key, r, c, meanPerYear, periods, activePeriods });
+      }
+    }
+
+    // Get current period
+    const curPeriod = temporalPeriods[temporalIdx];
+
+    // Find max absolute deviation for color scaling
+    const maxDev = Math.max(1, ...deviations.map(d => {
+      const rate = (d.periods[curPeriod] || 0) * periodsPerYear;
+      return Math.abs(rate - d.meanPerYear);
+    }));
+
+    deviations.forEach(d => {
+      const cellSouth = originLat + d.r * gridLat;
+      const cellWest = originLon + d.c * gridLon;
+      const cellNorth = cellSouth + gridLat;
+      const cellEast = cellWest + gridLon;
+
+      const countPerYear = (d.periods[curPeriod] || 0) * periodsPerYear;
+      const dev = countPerYear - d.meanPerYear;
+      const normDev = dev / maxDev; // -1 to 1
+
+      let fillColor;
+      if (normDev < -0.01) {
+        const t = Math.min(1, Math.abs(normDev));
+        fillColor = `rgb(${Math.round(15 + t * 10)},${Math.round(100 + t * 60)},${Math.round(30 + t * 30)})`;
+      } else if (normDev > 0.01) {
+        const t = Math.min(1, normDev);
+        fillColor = `rgb(${Math.round(170 + t * 85)},${Math.round(170 - t * 110)},${Math.round(20 - t * 20)})`;
+      } else {
+        fillColor = 'rgb(60,60,60)';
+      }
+
+      L.rectangle(
+        [[cellSouth, cellWest], [cellNorth, cellEast]],
+        {
+          color: 'rgba(0,0,0,0.15)',
+          weight: 0.5,
+          fillColor: fillColor,
+          fillOpacity: opacity,
+          renderer: canvasRenderer
+        }
+      ).bindTooltip(`${curPeriod}<br>${countPerYear.toFixed(1)} crimes/yr<br>mean: ${d.meanPerYear.toFixed(1)}/yr`, { sticky: true }).addTo(temporalLayer);
+    });
+
+    temporalLayer.addTo(map);
+
+    document.getElementById('temporalLabel').textContent = curPeriod;
+    document.getElementById('temporalInfo').textContent =
+      `${temporalPeriods.length} periods \u2022 deviation from cell mean`;
+
+    // Build legend
+    const el = document.getElementById('legend');
+    el.innerHTML = `<div class="legend-title">Deviation from Mean</div>` +
+      `<div class="legend-row"><span class="legend-swatch" style="background:rgb(25,160,60)"></span> Well below mean</div>` +
+      `<div class="legend-row"><span class="legend-swatch" style="background:rgb(60,60,60)"></span> Near mean</div>` +
+      `<div class="legend-row"><span class="legend-swatch" style="background:rgb(255,60,0)"></span> Well above mean</div>`;
+  }
+
+  window.setTemporalGran = function(gran) {
+    temporalGran = gran;
+    document.getElementById('toggleGranYear').classList.toggle('active', gran === 'year');
+    document.getElementById('toggleGranQuarter').classList.toggle('active', gran === 'quarter');
+    document.getElementById('toggleGranMonth').classList.toggle('active', gran === 'month');
+    stopPlay();
+    buildTemporalPeriods();
+    updateTemporal();
+  };
+
+  window.togglePlay = function() {
+    if (temporalPlaying) { stopPlay(); return; }
+    temporalPlaying = true;
+    document.getElementById('playBtn').innerHTML = '&#9646;&#9646;';
+    const speed = parseInt(document.getElementById('speedSlider').value);
+    const interval = 1200 / speed;
+    temporalTimer = setInterval(() => {
+      temporalIdx = (temporalIdx + 1) % temporalPeriods.length;
+      document.getElementById('timeSlider').value = temporalIdx;
+      updateTemporal();
+    }, interval);
+  };
+
+  function stopPlay() {
+    temporalPlaying = false;
+    if (temporalTimer) clearInterval(temporalTimer);
+    temporalTimer = null;
+    document.getElementById('playBtn').innerHTML = '&#9654;';
+  }
+
+  document.getElementById('timeSlider').addEventListener('input', (e) => {
+    temporalIdx = parseInt(e.target.value);
+    updateTemporal();
+  });
+
+  document.getElementById('speedSlider').addEventListener('input', (e) => {
+    document.getElementById('speedVal').textContent = e.target.value;
+    if (temporalPlaying) { stopPlay(); togglePlay(); }
+  });
+
+  window.setViewMode = function(mode) {
+    viewMode = mode;
+    document.getElementById('toggleGrid').classList.toggle('active', mode === 'grid');
+    document.getElementById('toggleCensus').classList.toggle('active', mode === 'census');
+    document.getElementById('toggleTemporal').classList.toggle('active', mode === 'temporal');
+    document.getElementById('gridControl').classList.toggle('hidden', mode === 'census' || mode === 'temporal');
+    document.getElementById('censusModeControl').classList.toggle('hidden', mode !== 'census');
+    document.getElementById('regionTypeControl').classList.toggle('hidden', mode !== 'census');
+    document.getElementById('temporalControls').classList.toggle('hidden', mode !== 'temporal');
+    document.getElementById('clickHint').style.display = mode === 'grid' ? 'block' : 'none';
+    if (mode === 'temporal') { stopPlay(); buildTemporalPeriods(); updateTemporal(); }
+    else { stopPlay(); updateView(); }
+  };
+
+  window.setCensusMode = function(mode) {
+    censusMode = mode;
+    document.getElementById('togglePerCapita').classList.toggle('active', mode === 'percapita');
+    document.getElementById('toggleRaw').classList.toggle('active', mode === 'raw');
+    updateView();
+  };
+
+  window.setRegionType = function(type) {
+    regionType = type;
+    document.getElementById('toggleTract').classList.toggle('active', type === 'tract');
+    document.getElementById('toggleZip').classList.toggle('active', type === 'zip');
+    document.getElementById('toggleBlkgrp').classList.toggle('active', type === 'blkgrp');
+    updateView();
+  };
+
+  // Category buttons
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCat = btn.dataset.cat;
+      updateView();
+    });
+  });
+
+  // Year select
+  document.getElementById('yearSelect').addEventListener('change', (e) => {
+    currentYear = e.target.value;
+    updateView();
+  });
+
+  // Grid size slider
+  document.getElementById('gridSlider').addEventListener('input', (e) => {
+    document.getElementById('gridVal').textContent = parseFloat(e.target.value).toFixed(1);
+    updateView();
+  });
+
+  // Opacity slider
+  document.getElementById('opacitySlider').addEventListener('input', (e) => {
+    opacity = parseFloat(e.target.value);
+    document.getElementById('opacityVal').textContent = opacity.toFixed(2);
+    updateView();
+  });
+
+  // Rebuild on pan/zoom
+  map.on('moveend', updateView);
+
+  // Load data
+  fetch('crimes-gh.json')
+    .then(r => r.json())
+    .then(raw => {
+      const catMap = {m:'murder',v:'violent',p:'petty',o:'other'};
+      allData = {
+        total: raw.f.length,
+        summary: raw.s,
+        features: raw.f.map(f => ({lat:f[0],lng:f[1],cat:catMap[f[2]]||f[2],year:f[3]})),
+        census_tracts: raw.ct,
+        block_groups: raw.bg,
+        zcta: raw.z
+      };
+      document.getElementById('loading').style.display = 'none';
+      buildDataAvailability();
+      updateView();
+    })
+    .catch(err => {
+      document.getElementById('loading').innerHTML =
+        '<div style="color:#ff4444">Error loading data.<br>Run: python3 ingest.py && python3 serve.py</div>';
+    });
+})();
+</script>
+</body>
+</html>
