@@ -844,6 +844,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     }));
 
     deviations.forEach(d => {
+      const curCount = d.periods[curPeriod] || 0;
+      if (curCount === 0) return;
+
       const cellSouth = originLat + d.r * gridLat;
       const cellWest = originLon + d.c * gridLon;
       const cellNorth = cellSouth + gridLat;
@@ -999,7 +1002,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       allData = {
         total: raw.f.length,
         summary: raw.s,
-        features: raw.f.map(f => ({lat:f[0],lng:f[1],cat:catMap[f[2]]||f[2],year:f[3]})),
+        features: raw.f.map(f => ({lat:f[0],lng:f[1],cat:catMap[f[2]]||f[2],year:f[3],month:f[4]})),
         census_tracts: raw.ct,
         block_groups: raw.bg,
         zcta: raw.z
