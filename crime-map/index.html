@@ -125,6 +125,45 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 
 .leaflet-interactive { filter: blur(0.3px); }
 
+/* Mobile-friendly popup */
+.leaflet-popup-content-wrapper {
+  background: rgba(10,10,10,0.97) !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #444 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+}
+.leaflet-popup-content {
+  margin: 12px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+.leaflet-popup-tip {
+  background: rgba(10,10,10,0.97) !important;
+  border: 1px solid #444 !important;
+}
+.leaflet-popup-close-button {
+  color: #888 !important;
+  font-size: 20px !important;
+  padding: 8px !important;
+}
+.leaflet-popup-close-button:hover {
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .leaflet-popup-content-wrapper {
+    max-width: 280px !important;
+    min-width: 240px !important;
+  }
+  .leaflet-popup-content {
+    font-size: 11px !important;
+  }
+  .leaflet-popup-close-button {
+    font-size: 24px !important;
+    padding: 12px !important;
+  }
+}
+
 .hidden { display: none !important; }
 
 /* Mobile hamburger button */
@@ -379,6 +418,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   let temporalPlaying = false;
   let temporalTimer = null;
   let temporalLayer = null;
+  let activePopup = null;
 
   // Point-in-polygon (ray casting)
   function pointInPolygon(lat, lng, polygon) {
@@ -678,7 +718,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
             interactive: true
           }
         )         .bindTooltip(`${rawTotal.toLocaleString()} ${catLabel} (${perYear.toFixed(1)}/yr)`, { sticky: true })
-         .bindPopup(() => buildPopupHtml(key), { maxWidth: 300 })
+         .bindPopup(() => buildPopupHtml(key), { maxWidth: 300, autoClose: false, closeOnClick: false, closeButton: true })
+         .on('popupopen', function() { activePopup = this; })
+         .on('popupclose', function() { activePopup = null; })
          .addTo(gridLayer);
       }
     }
@@ -1127,6 +1169,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 
   // Rebuild on pan/zoom
   map.on('moveend', updateView);
+
+  // Prevent popup from closing on mobile when tapping map
+  map.on('preclick', function(e) {
+    if (activePopup && window.innerWidth <= 768) {
+      // Don't close the popup if tapping on the map
+      setTimeout(() => {
+        if (activePopup) {
+          activePopup.openOn(map);
+        }
+      }, 10);
+    }
+  });
 
   // Load data
   fetch('crimes-gh.json')
