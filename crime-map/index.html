@@ -202,12 +202,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   .stats-bar {
     bottom: 8px; padding: 8px 12px; gap: 12px;
     font-size: 10px; flex-wrap: wrap; justify-content: center;
+    max-width: calc(100vw - 24px);
   }
   .stats-bar .stat .num { font-size: 14px; }
   .stats-bar .stat .lbl { font-size: 8px; }
   
   .legend-bar {
-    bottom: 50px; right: 8px; padding: 8px 10px;
+    bottom: 70px; right: 8px; padding: 8px 10px;
   }
   .legend-bar .legend-title { font-size: 8px; }
   .legend-bar .legend-row { font-size: 9px; gap: 4px; }
@@ -234,6 +235,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   
   .stats-bar { gap: 8px; padding: 6px 8px; }
   .stats-bar .stat .num { font-size: 12px; }
+  
+  .legend-bar {
+    bottom: 65px; right: 6px; padding: 6px 8px;
+  }
+  .legend-bar .legend-title { font-size: 7px; }
+  .legend-bar .legend-row { font-size: 8px; gap: 3px; }
+  .legend-bar .legend-swatch { width: 16px; height: 6px; }
   
   .cat-btn { font-size: 9px; padding: 5px 2px; }
   .jur-btn { font-size: 9px; padding: 4px 4px; }
