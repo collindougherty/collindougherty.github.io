@@ -126,6 +126,79 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .leaflet-interactive { filter: blur(0.3px); }
 
 .hidden { display: none !important; }
+
+/* Mobile hamburger button */
+.menu-btn {
+  display: none; position: absolute; top: 12px; right: 12px; z-index: 1100;
+  width: 40px; height: 40px; background: rgba(10,10,10,0.94); border: 1px solid #333;
+  border-radius: 8px; color: #fff; font-size: 20px; cursor: pointer;
+  align-items: center; justify-content: center;
+}
+.menu-btn:hover { border-color: #888; }
+
+/* Mobile overlay */
+.overlay {
+  display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); z-index: 1050;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .menu-btn { display: flex; }
+  
+  .control-panel {
+    position: fixed; top: 0; right: -320px; width: 300px; height: 100vh;
+    max-height: 100vh; border-radius: 0; transition: right 0.3s ease;
+    z-index: 1100;
+  }
+  .control-panel.open { right: 0; }
+  .overlay.open { display: block; }
+  
+  .title-bar {
+    padding: 8px 12px;
+  }
+  .title-bar h1 { font-size: 14px; }
+  .title-bar .sub { font-size: 10px; }
+  
+  .stats-bar {
+    bottom: 8px; padding: 8px 12px; gap: 12px;
+    font-size: 10px; flex-wrap: wrap; justify-content: center;
+  }
+  .stats-bar .stat .num { font-size: 14px; }
+  .stats-bar .stat .lbl { font-size: 8px; }
+  
+  .legend-bar {
+    bottom: 50px; right: 8px; padding: 8px 10px;
+  }
+  .legend-bar .legend-title { font-size: 8px; }
+  .legend-bar .legend-row { font-size: 9px; gap: 4px; }
+  .legend-bar .legend-swatch { width: 20px; height: 8px; }
+  
+  #clickHint {
+    font-size: 10px; padding: 3px 8px;
+  }
+  
+  .category-buttons { gap: 4px; }
+  .cat-btn { padding: 6px 4px; font-size: 10px; min-width: 40px; }
+  .jur-btn { padding: 5px 6px; font-size: 10px; }
+  
+  .toggle-btn { padding: 8px 6px; font-size: 11px; }
+  
+  .control-section select, .control-section input[type="range"] {
+    padding: 8px; font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-bar h1 { font-size: 12px; }
+  .title-bar .sub { display: none; }
+  
+  .stats-bar { gap: 8px; padding: 6px 8px; }
+  .stats-bar .stat .num { font-size: 12px; }
+  
+  .cat-btn { font-size: 9px; padding: 5px 2px; }
+  .jur-btn { font-size: 9px; padding: 4px 4px; }
+}
 </style>
 </head>
 <body>
@@ -136,6 +209,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 </div>
 
 <div id="map"></div>
+
+<button class="menu-btn" id="menuBtn" onclick="toggleMenu()">&#9776;</button>
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
 <div class="title-bar">
   <h1>OMAHA METRO CRIME MAP</h1>
@@ -957,6 +1033,28 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   document.getElementById('speedSlider').addEventListener('input', (e) => {
     document.getElementById('speedVal').textContent = e.target.value;
     if (temporalPlaying) { stopPlay(); togglePlay(); }
+  });
+
+  // Mobile menu toggle
+  window.toggleMenu = function() {
+    const panel = document.querySelector('.control-panel');
+    const overlay = document.getElementById('overlay');
+    const btn = document.getElementById('menuBtn');
+    const isOpen = panel.classList.toggle('open');
+    overlay.classList.toggle('open', isOpen);
+    btn.innerHTML = isOpen ? '&times;' : '&#9776;';
+  };
+
+  // Close menu when clicking a control on mobile
+  document.querySelector('.control-panel').addEventListener('click', function(e) {
+    if (e.target.matches('.toggle-btn, .cat-btn, .jur-btn, select, input')) {
+      // Don't close for range inputs (slider dragging)
+      if (e.target.type === 'range') return;
+      // Close after a short delay for better UX
+      setTimeout(() => {
+        if (window.innerWidth <= 768) toggleMenu();
+      }, 200);
+    }
   });
 
   window.setViewMode = function(mode) {
