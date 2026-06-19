@@ -380,18 +380,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     el.innerHTML = html;
   }
 
-  function getActiveYears() {
-    if (!allData || !allData.summary) return 12;
-    const years = new Set();
-    allData.summary.forEach(s => {
-      if (currentCat === 'all' || true) {
-        years.add(s.year);
-      }
-    });
-    if (currentYear !== 'all') return 1;
-    return years.size;
-  }
-
   function filterData() {
     if (!allData) return [];
     return allData.features.filter(f => {
@@ -437,8 +425,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       cellYears[key][f.year] = (cellYears[key][f.year] || 0) + 1;
     });
 
-    // Per-year adjustment: divide by number of years of data
-    const numYears = getActiveYears();
+    // Per-cell year counting: divide each cell by its own active years
+    const cellNumYears = {};
+    for (const key in cellYears) {
+      cellNumYears[key] = Object.keys(cellYears[key]).length;
+    }
     const maxRawCount = Math.max(0, ...Object.values(cells));
 
     // Precompute cell means for color coding
@@ -449,19 +440,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       cellMeans[key] = vals.length > 0 ? vals.reduce((a,b) => a+b, 0) / vals.length : 0;
     }
 
-    Object.keys(cells).forEach(k => { cells[k] = cells[k] / numYears; });
+    // Per-year adjustment: per-cell
+    const cellsPerYear = {};
+    for (const key in cells) {
+      cellsPerYear[key] = cells[key] / (cellNumYears[key] || 1);
+    }
 
-    const maxCount = Math.max(1, ...Object.values(cells));
-    const counts = Object.values(cells);
+    // Percentile array: only cells with data (exclude empty cells from percentile calculation)
+    const counts = Object.values(cellsPerYear).filter(v => v > 0);
 
     // Calculate visible range of cells
     const minRow = Math.floor((south - originLat) / gridLat);
     const maxRow = Math.floor((north - originLat) / gridLat);
     const minCol = Math.floor((west - originLon) / gridLon);
     const maxCol = Math.floor((east - originLon) / gridLon);
-
-    // Include 0 in percentile calculation
-    counts.push(0);
 
     const numVisible = (maxRow - minRow + 1) * (maxCol - minCol + 1);
 
@@ -483,12 +475,14 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     const globalRecentYear = Math.max(...allYears.filter(y => yearCountsAll[y].some(c => c > 0)));
 
     function buildPopupHtml(key) {
-      const count = cells[key] || 0;
+      const rawTotal = cells[key] || 0;
+      const perYear = cellsPerYear[key] || 0;
+      const cellActiveYears = cellNumYears[key] || 1;
       const yearData = cellYears[key] || {};
       const yCounts = allYears.map(y => yearData[y] || 0);
       const activeYCounts = yCounts.filter(c => c > 0);
       const mean = activeYCounts.length > 0 ? activeYCounts.reduce((a,b) => a+b, 0) / activeYCounts.length : 0;
-      const pct = percentileRank(counts, count);
+      const pct = percentileRank(counts, perYear);
 
       // Most recent year with data for safety rating
       let recentYear = null;
@@ -544,7 +538,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       const pctOrdinal = ord(pctLabel);
 
       return `<div style="font-family:system-ui;font-size:12px;min-width:260px">
-        <div style="font-weight:600;margin-bottom:2px">${emoji} ${count.toFixed(1)} ${catLabel}/yr</div>
+        <div style="font-weight:600;margin-bottom:2px">${emoji} ${rawTotal.toLocaleString()} ${catLabel} (${perYear.toFixed(1)}/yr)</div>
         <div style="font-size:11px;margin-bottom:8px">
           <span style="color:${ratingColor};font-weight:600">${rating}</span>
           <span style="color:#999"> · ${pctOrdinal} overall · ${ord(recentPctVal)} in ${recentYear || 'N/A'}</span>
@@ -562,15 +556,16 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     for (let r = minRow; r <= maxRow; r++) {
       for (let c = minCol; c <= maxCol; c++) {
         const key = `${r},${c}`;
-        const count = cells[key] || 0;
+        const rawTotal = cells[key] || 0;
+        const perYear = cellsPerYear[key] || 0;
 
         const cellSouth = originLat + r * gridLat;
         const cellWest = originLon + c * gridLon;
         const cellNorth = cellSouth + gridLat;
         const cellEast = cellWest + gridLon;
 
-        const cellOpacity = count === 0 ? opacity * 0.35 : opacity;
-        const pct = percentileRank(counts, count);
+        const cellOpacity = rawTotal === 0 ? opacity * 0.35 : opacity;
+        const pct = percentileRank(counts, perYear);
 
         L.rectangle(
           [[cellSouth, cellWest], [cellNorth, cellEast]],
@@ -582,7 +577,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
             renderer: canvasRenderer,
             interactive: true
           }
-        ).bindTooltip(`${count.toFixed(1)} ${catLabel}/yr`, { sticky: true })
+        )         .bindTooltip(`${rawTotal.toLocaleString()} ${catLabel} (${perYear.toFixed(1)}/yr)`, { sticky: true })
          .bindPopup(() => buildPopupHtml(key), { maxWidth: 300 })
          .addTo(gridLayer);
       }
@@ -597,7 +592,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     document.getElementById('statMax').textContent = maxRawCount.toLocaleString();
     document.getElementById('statCells').textContent = numCells.toLocaleString();
     document.getElementById('statCellsLabel').textContent = 'Cells';
-    document.getElementById('gridInfo').textContent = `${gridSizeMiles}mi cells \u2022 ${numCells} visible \u2022 ${numYears}yr span`;
+    document.getElementById('gridInfo').textContent = `${gridSizeMiles}mi cells \u2022 ${numCells} visible`;
 
     buildLegend('grid');
   }
@@ -646,9 +641,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       }
     });
 
-    // Count crimes per region using spatial grid
+    // Count crimes per region per year using spatial grid
     const regionCounts = {};
-    regions.forEach(t => { regionCounts[t.geoid] = 0; });
+    const regionYears = {};
+    regions.forEach(t => { regionCounts[t.geoid] = 0; regionYears[t.geoid] = new Set(); });
 
     filtered.forEach(f => {
       const gi = Math.floor(f.lng / CELL);
@@ -662,22 +658,27 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         const d = (f.lat - c.cy) ** 2 + (f.lng - c.cx) ** 2;
         if (d < minDist) { minDist = d; closest = c.geoid; }
       }
-      if (closest) regionCounts[closest]++;
+      if (closest) {
+        regionCounts[closest]++;
+        regionYears[closest].add(f.year);
+      }
     });
 
     // Calculate rates per 1000 people per year and raw counts per year
-    const numYears = getActiveYears();
+    // Per-region year counting
     const rates = [];
     const rawCounts = [];
     const regionRates = {};
     regions.forEach(t => {
-      const count = (regionCounts[t.geoid] || 0) / numYears;
+      const total = regionCounts[t.geoid] || 0;
+      const activeYears = regionYears[t.geoid] ? regionYears[t.geoid].size : 1;
+      const count = total / Math.max(1, activeYears);
       const pop = t.pop || 0;
       let rate = 0;
       if (pop > 0) {
         rate = (count / pop) * 1000;
       }
-      regionRates[t.geoid] = { count, rate };
+      regionRates[t.geoid] = { count, rate, total, activeYears };
       if (pop > 0) rates.push(rate);
       rawCounts.push(count);
     });
@@ -689,7 +690,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 
     // Draw regions
     regions.forEach(t => {
-      const { count, rate } = regionRates[t.geoid] || { count: 0, rate: 0 };
+      const { count, rate, total, activeYears } = regionRates[t.geoid] || { count: 0, rate: 0, total: 0, activeYears: 1 };
       const pop = t.pop || 0;
       const polygons = getPolygons(t.geom);
 
@@ -702,8 +703,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       const latlngs = polygons.map(ring => ring.map(c => [c[1], c[0]]));
 
       const tooltipHtml = useRate
-        ? `<b>${t.label}</b><br>${count.toFixed(1)} crimes/yr<br>Pop: ${pop.toLocaleString()}<br>Rate: ${rate.toFixed(2)} per 1k/yr`
-        : `<b>${t.label}</b><br>${count.toFixed(1)} crimes/yr<br>Pop: ${pop.toLocaleString()}`;
+        ? `<b>${t.label}</b><br>${total.toLocaleString()} crimes (${count.toFixed(1)}/yr)<br>Pop: ${pop.toLocaleString()}<br>Rate: ${rate.toFixed(2)} per 1k/yr`
+        : `<b>${t.label}</b><br>${total.toLocaleString()} crimes (${count.toFixed(1)}/yr)<br>Pop: ${pop.toLocaleString()}`;
 
       L.polygon(latlngs, {
         color: 'rgba(255,255,255,0.2)',
@@ -723,7 +724,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     document.getElementById('statMax').textContent = maxRawCount.toLocaleString();
     document.getElementById('statCells').textContent = activeRegions.toLocaleString();
     document.getElementById('statCellsLabel').textContent = 'Regions';
-    document.getElementById('gridInfo').textContent = `${activeRegions} ${regionLabel} \u2022 ${useRate ? 'per 1k/yr' : 'per year'} \u2022 ${numYears}yr span`;
+    document.getElementById('gridInfo').textContent = `${activeRegions} ${regionLabel} \u2022 ${useRate ? 'per 1k/yr' : 'per year'}`;
 
     buildLegend('census', useRate);
   }
